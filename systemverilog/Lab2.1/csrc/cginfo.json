@@ -1,0 +1,91 @@
+{
+    "MlibObjs": {},
+    "stat": {
+        "nMops": 1029
+    },
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mode": 4,
+                "mod": "std",
+                "out": "reYIK_d.o",
+                "archive": "archive.1/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7328,
+                "mode": 4,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "archive": "archive.1/_22888_archive_1.a"
+            }
+        },
+        "Tester": {
+            "QZwzh_d": {
+                "bytes": 14350,
+                "mode": 4,
+                "mod": "Tester",
+                "out": "QZwzh_d.o",
+                "archive": "archive.1/_22888_archive_1.a"
+            }
+        }
+    },
+    "CurCompileUdps": {},
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "SevenSegmentDigit": [
+            "SevenSegmentDigit",
+            "wDpck",
+            "module"
+        ],
+        "SevenSegmentControl": [
+            "SevenSegmentControl",
+            "pjySW",
+            "module"
+        ],
+        "Tester": [
+            "Tester",
+            "QZwzh",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "SevenSegmentDigit",
+        "SevenSegmentControl",
+        "Tester"
+    ],
+    "CompileProcesses": [
+        "cgproc.22888.json"
+    ],
+    "CompileStrategy": "fullobj",
+    "CompileStatus": "Successful",
+    "LVLData": [
+        "SIM"
+    ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 58826
+    },
+    "PEModules": [],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab2",
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab2/simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab2/csrc",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.1"
+    }
+}

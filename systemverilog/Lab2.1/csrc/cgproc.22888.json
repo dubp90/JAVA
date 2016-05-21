@@ -1,0 +1,72 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "SevenSegmentDigit": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "SevenSegmentControl": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "Tester": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        }
+    },
+    "CompUnits": {
+        "QZwzh_d": {
+            "mode": 4,
+            "mod": "Tester",
+            "out": "QZwzh_d.o",
+            "bytes": 11049,
+            "archive": "archive.1/_22888_archive_1.a"
+        },
+        "pjySW_d": {
+            "mode": 4,
+            "mod": "SevenSegmentControl",
+            "out": "pjySW_d.o",
+            "bytes": 11854,
+            "archive": "archive.1/_22888_archive_1.a"
+        },
+        "wDpck_d": {
+            "mode": 4,
+            "mod": "SevenSegmentDigit",
+            "out": "wDpck_d.o",
+            "bytes": 11053,
+            "archive": "archive.1/_22888_archive_1.a"
+        },
+        "amcQw_d": {
+            "mode": 4,
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 9137,
+            "archive": "archive.1/_22888_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.1/_22888_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9137
+                ],
+                [
+                    "wDpck_d.o",
+                    11053
+                ],
+                [
+                    "pjySW_d.o",
+                    11854
+                ],
+                [
+                    "QZwzh_d.o",
+                    11049
+                ]
+            ],
+            "size": 43093
+        }
+    ]
+}
