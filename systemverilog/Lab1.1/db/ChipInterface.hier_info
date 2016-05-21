@@ -1,0 +1,81 @@
+|ChipInterface
+LEDG[0] <= Design:dut.port0
+LEDG[1] <= <GND>
+LEDG[2] <= <GND>
+LEDG[3] <= <GND>
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+
+
+|ChipInterface|Design:dut
+valid <= nor_13:g20.port0
+a => a.IN3
+b => b.IN1
+c => c.IN2
+d => d.IN4
+e => e.IN3
+f => f.IN1
+
+
+|ChipInterface|Design:dut|nor_5:g16
+n5_out <= g5.DB_MAX_OUTPUT_PORT_TYPE
+n5_in1 => g1.IN0
+n5_in2 => g1.IN1
+n5_in3 => g2.IN0
+n5_in4 => g2.IN1
+n5_in5 => g2.IN2
+
+
+|ChipInterface|Design:dut|nor_5:g17
+n5_out <= g5.DB_MAX_OUTPUT_PORT_TYPE
+n5_in1 => g1.IN0
+n5_in2 => g1.IN1
+n5_in3 => g2.IN0
+n5_in4 => g2.IN1
+n5_in5 => g2.IN2
+
+
+|ChipInterface|Design:dut|nor_5:g18
+n5_out <= g5.DB_MAX_OUTPUT_PORT_TYPE
+n5_in1 => g1.IN0
+n5_in2 => g1.IN1
+n5_in3 => g2.IN0
+n5_in4 => g2.IN1
+n5_in5 => g2.IN2
+
+
+|ChipInterface|Design:dut|nor_6:g19
+n6_out <= g5.DB_MAX_OUTPUT_PORT_TYPE
+n6_in1 => g1.IN0
+n6_in2 => g1.IN1
+n6_in3 => g1.IN2
+n6_in4 => g2.IN0
+n6_in5 => g2.IN1
+n6_in6 => g2.IN2
+
+
+|ChipInterface|Design:dut|nor_13:g20
+n13_out <= g9.DB_MAX_OUTPUT_PORT_TYPE
+n13_in1 => g1.IN0
+n13_in2 => g1.IN1
+n13_in3 => g1.IN2
+n13_in4 => g1.IN3
+n13_in5 => g2.IN0
+n13_in6 => g2.IN1
+n13_in7 => g2.IN2
+n13_in8 => g2.IN3
+n13_in9 => g3.IN0
+n13_in10 => g3.IN1
+n13_in11 => g3.IN2
+n13_in12 => g4.IN0
+n13_in13 => g4.IN1
+
+

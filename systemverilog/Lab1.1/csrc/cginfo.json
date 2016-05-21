@@ -1,0 +1,79 @@
+{
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mod": "std",
+                "out": "reYIK_d.o",
+                "mode": 4,
+                "archive": "archive.4/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7328,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "out": "amcQw_d.o",
+                "archive": "archive.4/_17454_archive_1.a"
+            }
+        },
+        "Tester": {
+            "QZwzh_d": {
+                "bytes": 19105,
+                "mod": "Tester",
+                "mode": 4,
+                "out": "QZwzh_d.o",
+                "archive": "archive.4/_17454_archive_1.a"
+            }
+        }
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "Tester": [
+            "Tester",
+            "QZwzh",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "CompileProcesses": [
+        "cgproc.17454.json"
+    ],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 58196
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "Tester"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "Misc": {
+        "default_output_dir": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab1",
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab1/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab1/simv.daidir",
+        "archive_dir": "archive.4"
+    },
+    "stat": {
+        "nMops": 975
+    },
+    "CompileStatus": "Successful"
+}

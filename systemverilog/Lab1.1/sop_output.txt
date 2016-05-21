@@ -1,0 +1,71 @@
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Jan 29 14:23 2016
+                   0 test = 000000, valid = 1
+                  10 test = 000001, valid = 0
+                  20 test = 000010, valid = 1
+                  30 test = 000011, valid = 1
+                  40 test = 000100, valid = 0
+                  50 test = 000101, valid = 1
+                  60 test = 000110, valid = 0
+                  70 test = 000111, valid = 0
+                  80 test = 001000, valid = 0
+                  90 test = 001001, valid = 1
+                 100 test = 001010, valid = 0
+                 110 test = 001011, valid = 0
+                 120 test = 001100, valid = 0
+                 130 test = 001101, valid = 1
+                 140 test = 001110, valid = 1
+                 150 test = 001111, valid = 0
+                 160 test = 010000, valid = 0
+                 170 test = 010001, valid = 0
+                 180 test = 010010, valid = 1
+                 190 test = 010011, valid = 0
+                 200 test = 010100, valid = 0
+                 210 test = 010101, valid = 1
+                 220 test = 010110, valid = 1
+                 230 test = 010111, valid = 0
+                 240 test = 011000, valid = 1
+                 250 test = 011001, valid = 1
+                 260 test = 011010, valid = 1
+                 270 test = 011011, valid = 0
+                 280 test = 011100, valid = 0
+                 290 test = 011101, valid = 1
+                 300 test = 011110, valid = 0
+                 310 test = 011111, valid = 0
+                 320 test = 100000, valid = 0
+                 330 test = 100001, valid = 0
+                 340 test = 100010, valid = 0
+                 350 test = 100011, valid = 0
+                 360 test = 100100, valid = 0
+                 370 test = 100101, valid = 0
+                 380 test = 100110, valid = 0
+                 390 test = 100111, valid = 0
+                 400 test = 101000, valid = 1
+                 410 test = 101001, valid = 1
+                 420 test = 101010, valid = 0
+                 430 test = 101011, valid = 1
+                 440 test = 101100, valid = 0
+                 450 test = 101101, valid = 1
+                 460 test = 101110, valid = 0
+                 470 test = 101111, valid = 0
+                 480 test = 110000, valid = 1
+                 490 test = 110001, valid = 1
+                 500 test = 110010, valid = 0
+                 510 test = 110011, valid = 1
+                 520 test = 110100, valid = 0
+                 530 test = 110101, valid = 1
+                 540 test = 110110, valid = 0
+                 550 test = 110111, valid = 0
+                 560 test = 111000, valid = 1
+                 570 test = 111001, valid = 0
+                 580 test = 111010, valid = 1
+                 590 test = 111011, valid = 1
+                 600 test = 111100, valid = 0
+                 610 test = 111101, valid = 1
+                 620 test = 111110, valid = 0
+                 630 test = 111111, valid = 0
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 630
+CPU Time:      0.340 seconds;       Data structure size:   0.0Mb
+Fri Jan 29 14:23:40 2016
