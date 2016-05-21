@@ -1,0 +1,70 @@
+addr data  label   opcode  operands
+---- ----  -----   ------  --------
+0000 0C00          LDI     R0 
+0001 0000                  $0 
+0002 0C09          LDI     R1 
+0003 0005                  size 
+0004 0C12          LDI     R2 
+0005 0000                  $0 
+0006 0C1B          LDI     R3 
+0007 0000                  $0 
+0008 3209          PUSH    R1 
+0009 3100          .DW     $3100 
+000A 0011          .DW     tetraloop 
+000B 3409          POP     R1 
+000C 3A16          MOV     R2 R6 
+000D 0C36          LDI     R6 
+000E 0000                  $0 
+000F 2800          BRA     
+0010 0043                  done 
+0011 4009  tetraloop LDSF    R1 
+0012 0001                  $1 
+0013 4409          CMI     R1 
+0014 0000                  $0 
+0015 2A00          BRZ     
+0016 0042                  ret 
+0017 3A19          MOV     R3 R1 
+0018 321B          PUSH    R3 
+0019 3100          .DW     $3100 
+001A 002E          .DW     triloop 
+001B 3409          POP     R1 
+001C 3224          PUSH    R4 
+001D 0C24          LDI     R4 
+001E 0000                  $0 
+001F 1609          DECR    R1 
+0020 3209          PUSH    R1 
+0021 3100          .DW     $3100 
+0022 0011          .DW     tetraloop 
+0023 3A16          MOV     R2 R6 
+0024 0C36          LDI     R6 
+0025 0000                  $0 
+0026 3409          POP     R1 
+0027 3400          POP     R0 
+0028 0E10          ADD     R2 R0 
+0029 0C09          LDI     R1 
+002A 0000                  $0 
+002B 0C00          LDI     R0 
+002C 0000                  $0 
+002D 3140          .DW     $3140 
+002E 401B  triloop LDSF    R3 
+002F 0001                  $1 
+0030 441B          CMI     R3 
+0031 0000                  $0 
+0032 2A00          BRZ     
+0033 0042                  ret 
+0034 321B          PUSH    R3 
+0035 161B          DECR    R3 
+0036 321B          PUSH    R3 
+0037 3100          .DW     $3100 
+0038 002E          .DW     triloop 
+0039 341B          POP     R3 
+003A 341B          POP     R3 
+003B 0E23          ADD     R4 R3 
+003C 3A04          MOV     R0 R4 
+003D 0C24          LDI     R4 
+003E 0000                  $0 
+003F 0C1B          LDI     R3 
+0040 0000                  $0 
+0041 3140          .DW     $3140 
+0042 3140  ret     .DW     $3140 
+0043 3000  done    STOP    

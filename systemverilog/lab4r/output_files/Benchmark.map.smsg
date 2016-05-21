@@ -1,0 +1,8 @@
+Warning (10273): Verilog HDL warning at library.sv(48): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at library.sv(72): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at library.sv(98): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at library.sv(158): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at library.sv(181): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at library.sv(206): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at controlpath.sv(174): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at controlpath.sv(483): extended using "x" or "z"

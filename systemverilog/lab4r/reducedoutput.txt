@@ -1,0 +1,763 @@
+cycle       16384
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1000  ALUInB: 0xxxxx  ALUOut: 0x1000
+PC:     0x1000  IR:     0x0000  SP:     0x0000
+MAR:    0x0fff  MDR     0x0000  ZCNV:   0000
+==================================================
+cycle       16385
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1000  ALUInB: 0xxxxx  ALUOut: 0x1001
+PC:     0x1000  IR:     0x0000  SP:     0x0000
+MAR:    0x1000  MDR     0x0000  ZCNV:   0000
+==================================================
+cycle       16386
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x0c00  ALUInB: 0xxxxx  ALUOut: 0x0c00
+PC:     0x1001  IR:     0x0000  SP:     0x0000
+MAR:    0x1000  MDR     0x0c00  ZCNV:   0000
+==================================================
+cycle       16387
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: LDI
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x1001  IR:     0x0c00  SP:     0x0000
+MAR:    0x1000  MDR     0x0c00  ZCNV:   0000
+==================================================
+cycle       16388
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI  NState: LDI1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1001  ALUInB: 0xxxxx  ALUOut: 0x1001
+PC:     0x1001  IR:     0x0c00  SP:     0x0000
+MAR:    0x1000  MDR     0x0c00  ZCNV:   0000
+==================================================
+cycle       16389
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI1  NState: LDI2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1001  ALUInB: 0xxxxx  ALUOut: 0x1002
+PC:     0x1001  IR:     0x0c00  SP:     0x0000
+MAR:    0x1001  MDR     0x0c00  ZCNV:   0000
+==================================================
+cycle       16390
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI2  NState: FETCH
+Dest:   LoadCC: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x0000  ALUInB: 0xxxxx  ALUOut: 0x0000
+PC:     0x1002  IR:     0x0c00  SP:     0x0000
+MAR:    0x1001  MDR     0x0000  ZCNV:   0000
+==================================================
+cycle       16391
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1002  ALUInB: 0xxxxx  ALUOut: 0x1002
+PC:     0x1002  IR:     0x0c00  SP:     0x0000
+MAR:    0x1001  MDR     0x0000  ZCNV:   1000
+==================================================
+cycle       16392
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1002  ALUInB: 0xxxxx  ALUOut: 0x1003
+PC:     0x1002  IR:     0x0c00  SP:     0x0000
+MAR:    0x1002  MDR     0x0000  ZCNV:   1000
+==================================================
+cycle       16393
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x0c09  ALUInB: 0xxxxx  ALUOut: 0x0c09
+PC:     0x1003  IR:     0x0c00  SP:     0x0000
+MAR:    0x1002  MDR     0x0c09  ZCNV:   1000
+==================================================
+cycle       16394
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: LDI
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x1003  IR:     0x0c09  SP:     0x0000
+MAR:    0x1002  MDR     0x0c09  ZCNV:   1000
+==================================================
+cycle       16395
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI  NState: LDI1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x1003  ALUInB: 0xxxxx  ALUOut: 0x1003
+PC:     0x1003  IR:     0x0c09  SP:     0x0000
+MAR:    0x1002  MDR     0x0c09  ZCNV:   1000
+==================================================
+cycle       16396
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI1  NState: LDI2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x1003  ALUInB: 0xxxxx  ALUOut: 0x1004
+PC:     0x1003  IR:     0x0c09  SP:     0x0000
+MAR:    0x1003  MDR     0x0c09  ZCNV:   1000
+==================================================
+cycle       16397
+R0: 0x0000  R1: 0x0000  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI2  NState: FETCH
+Dest:   LoadCC: ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x0003  ALUInB: 0xxxxx  ALUOut: 0x0003
+PC:     0x1004  IR:     0x0c09  SP:     0x0000
+MAR:    0x1003  MDR     0x0003  ZCNV:   1000
+==================================================
+cycle       16398
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x1004  ALUInB: 0xxxxx  ALUOut: 0x1004
+PC:     0x1004  IR:     0x0c09  SP:     0x0000
+MAR:    0x1003  MDR     0x0003  ZCNV:   0000
+==================================================
+cycle       16399
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x1004  ALUInB: 0xxxxx  ALUOut: 0x1005
+PC:     0x1004  IR:     0x0c09  SP:     0x0000
+MAR:    0x1004  MDR     0x0003  ZCNV:   0000
+==================================================
+cycle       16400
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x0c12  ALUInB: 0xxxxx  ALUOut: 0x0c12
+PC:     0x1005  IR:     0x0c09  SP:     0x0000
+MAR:    0x1004  MDR     0x0c12  ZCNV:   0000
+==================================================
+cycle       16401
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: LDI
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 2        AddrB: 2
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x1005  IR:     0x0c12  SP:     0x0000
+MAR:    0x1004  MDR     0x0c12  ZCNV:   0000
+==================================================
+cycle       16402
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI  NState: LDI1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 2        AddrB: 2
+ALUInA: 0x1005  ALUInB: 0xxxxx  ALUOut: 0x1005
+PC:     0x1005  IR:     0x0c12  SP:     0x0000
+MAR:    0x1004  MDR     0x0c12  ZCNV:   0000
+==================================================
+cycle       16403
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI1  NState: LDI2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 2        AddrB: 2
+ALUInA: 0x1005  ALUInB: 0xxxxx  ALUOut: 0x1006
+PC:     0x1005  IR:     0x0c12  SP:     0x0000
+MAR:    0x1005  MDR     0x0c12  ZCNV:   0000
+==================================================
+cycle       16404
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI2  NState: FETCH
+Dest:   LoadCC: ALUop:      SrcA:       SrcB:  
+AddrA: 2        AddrB: 2
+ALUInA: 0x0000  ALUInB: 0xxxxx  ALUOut: 0x0000
+PC:     0x1006  IR:     0x0c12  SP:     0x0000
+MAR:    0x1005  MDR     0x0000  ZCNV:   0000
+==================================================
+cycle       16405
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 2        AddrB: 2
+ALUInA: 0x1006  ALUInB: 0xxxxx  ALUOut: 0x1006
+PC:     0x1006  IR:     0x0c12  SP:     0x0000
+MAR:    0x1005  MDR     0x0000  ZCNV:   1000
+==================================================
+cycle       16406
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 2        AddrB: 2
+ALUInA: 0x1006  ALUInB: 0xxxxx  ALUOut: 0x1007
+PC:     0x1006  IR:     0x0c12  SP:     0x0000
+MAR:    0x1006  MDR     0x0000  ZCNV:   1000
+==================================================
+cycle       16407
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 2        AddrB: 2
+ALUInA: 0x0c1b  ALUInB: 0xxxxx  ALUOut: 0x0c1b
+PC:     0x1007  IR:     0x0c12  SP:     0x0000
+MAR:    0x1006  MDR     0x0c1b  ZCNV:   1000
+==================================================
+cycle       16408
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: LDI
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 3        AddrB: 3
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x1007  IR:     0x0c1b  SP:     0x0000
+MAR:    0x1006  MDR     0x0c1b  ZCNV:   1000
+==================================================
+cycle       16409
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI  NState: LDI1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 3        AddrB: 3
+ALUInA: 0x1007  ALUInB: 0xxxxx  ALUOut: 0x1007
+PC:     0x1007  IR:     0x0c1b  SP:     0x0000
+MAR:    0x1006  MDR     0x0c1b  ZCNV:   1000
+==================================================
+cycle       16410
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI1  NState: LDI2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 3        AddrB: 3
+ALUInA: 0x1007  ALUInB: 0xxxxx  ALUOut: 0x1008
+PC:     0x1007  IR:     0x0c1b  SP:     0x0000
+MAR:    0x1007  MDR     0x0c1b  ZCNV:   1000
+==================================================
+cycle       16411
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: LDI2  NState: FETCH
+Dest:   LoadCC: ALUop:      SrcA:       SrcB:  
+AddrA: 3        AddrB: 3
+ALUInA: 0x0000  ALUInB: 0xxxxx  ALUOut: 0x0000
+PC:     0x1008  IR:     0x0c1b  SP:     0x0000
+MAR:    0x1007  MDR     0x0000  ZCNV:   1000
+==================================================
+cycle       16412
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 3        AddrB: 3
+ALUInA: 0x1008  ALUInB: 0xxxxx  ALUOut: 0x1008
+PC:     0x1008  IR:     0x0c1b  SP:     0x0000
+MAR:    0x1007  MDR     0x0000  ZCNV:   1000
+==================================================
+cycle       16413
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 3        AddrB: 3
+ALUInA: 0x1008  ALUInB: 0xxxxx  ALUOut: 0x1009
+PC:     0x1008  IR:     0x0c1b  SP:     0x0000
+MAR:    0x1008  MDR     0x0000  ZCNV:   1000
+==================================================
+cycle       16414
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 3        AddrB: 3
+ALUInA: 0x3100  ALUInB: 0xxxxx  ALUOut: 0x3100
+PC:     0x1009  IR:     0x0c1b  SP:     0x0000
+MAR:    0x1008  MDR     0x3100  ZCNV:   1000
+==================================================
+cycle       16415
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: JSRW
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x1009  IR:     0x3100  SP:     0x0000
+MAR:    0x1008  MDR     0x3100  ZCNV:   1000
+==================================================
+cycle       16416
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: JSRW  NState: JSR1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x0000  ALUInB: 0xxxxx  ALUOut: 0xffff
+PC:     0x1009  IR:     0x3100  SP:     0x0000
+MAR:    0x1008  MDR     0x3100  ZCNV:   1000
+==================================================
+cycle       16417
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: JSR1  NState: JSR2
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xffff  ALUInB: 0xxxxx  ALUOut: 0xffff
+PC:     0x1009  IR:     0x3100  SP:     0xffff
+MAR:    0x1008  MDR     0x3100  ZCNV:   1000
+==================================================
+cycle       16418
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: JSR2  NState: JSR3
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1009  ALUInB: 0xxxxx  ALUOut: 0x100a
+PC:     0x1009  IR:     0x3100  SP:     0xffff
+MAR:    0xffff  MDR     0x3100  ZCNV:   1000
+==================================================
+cycle       16419
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: JSR3  NState: JSR4
+Dest:  LoadCC:  REI:  WEI: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1009  ALUInB: 0xxxxx  ALUOut: 0x1009
+PC:     0x1009  IR:     0x3100  SP:     0xffff
+MAR:    0xffff  MDR     0x100a  ZCNV:   1000
+==================================================
+cycle       16420
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: JSR4  NState: JSR5
+Dest:  LoadCC:  REI: ALUop:       SrcA:        SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x1009  IR:     0x3100  SP:     0xffff
+MAR:    0x1009  MDR     0x100a  ZCNV:   1000
+==================================================
+cycle       16421
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: JSR5  NState: FETCH
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x100c  ALUInB: 0xxxxx  ALUOut: 0x100c
+PC:     0x1009  IR:     0x3100  SP:     0xffff
+MAR:    0x1009  MDR     0x100c  ZCNV:   1000
+==================================================
+cycle       16422
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x100c  ALUInB: 0xxxxx  ALUOut: 0x100c
+PC:     0x100c  IR:     0x3100  SP:     0xffff
+MAR:    0x1009  MDR     0x100c  ZCNV:   1000
+==================================================
+cycle       16423
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x100c  ALUInB: 0xxxxx  ALUOut: 0x100d
+PC:     0x100c  IR:     0x3100  SP:     0xffff
+MAR:    0x100c  MDR     0x100c  ZCNV:   1000
+==================================================
+cycle       16424
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x4409  ALUInB: 0xxxxx  ALUOut: 0x4409
+PC:     0x100d  IR:     0x3100  SP:     0xffff
+MAR:    0x100c  MDR     0x4409  ZCNV:   1000
+==================================================
+cycle       16425
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: CMI
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x100d  IR:     0x4409  SP:     0xffff
+MAR:    0x100c  MDR     0x4409  ZCNV:   1000
+==================================================
+cycle       16426
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: CMI  NState: CMI1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x100d  ALUInB: 0xxxxx  ALUOut: 0x100d
+PC:     0x100d  IR:     0x4409  SP:     0xffff
+MAR:    0x100c  MDR     0x4409  ZCNV:   1000
+==================================================
+cycle       16427
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: CMI1  NState: CMI2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x100d  ALUInB: 0xxxxx  ALUOut: 0x100e
+PC:     0x100d  IR:     0x4409  SP:     0xffff
+MAR:    0x100d  MDR     0x4409  ZCNV:   1000
+==================================================
+cycle       16428
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: CMI2  NState: FETCH
+Dest:  LoadCC: ALUop:      SrcA:        SrcB: 
+AddrA: 1        AddrB: 1
+ALUInA: 0x0000  ALUInB: 0x0000  ALUOut: 0x0000
+PC:     0x100e  IR:     0x4409  SP:     0xffff
+MAR:    0x100d  MDR     0x0000  ZCNV:   1000
+==================================================
+cycle       16429
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x100e  ALUInB: 0xxxxx  ALUOut: 0x100e
+PC:     0x100e  IR:     0x4409  SP:     0xffff
+MAR:    0x100d  MDR     0x0000  ZCNV:   1100
+==================================================
+cycle       16430
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x100e  ALUInB: 0xxxxx  ALUOut: 0x100f
+PC:     0x100e  IR:     0x4409  SP:     0xffff
+MAR:    0x100e  MDR     0x0000  ZCNV:   1100
+==================================================
+cycle       16431
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 1        AddrB: 1
+ALUInA: 0x2a00  ALUInB: 0xxxxx  ALUOut: 0x2a00
+PC:     0x100f  IR:     0x4409  SP:     0xffff
+MAR:    0x100e  MDR     0x2a00  ZCNV:   1100
+==================================================
+cycle       16432
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: BRZ
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x100f  IR:     0x2a00  SP:     0xffff
+MAR:    0x100e  MDR     0x2a00  ZCNV:   1100
+==================================================
+cycle       16433
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: BRZ  NState: BRZ2
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x100f  ALUInB: 0xxxxx  ALUOut: 0x100f
+PC:     0x100f  IR:     0x2a00  SP:     0xffff
+MAR:    0x100e  MDR     0x2a00  ZCNV:   1100
+==================================================
+cycle       16434
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: BRZ2  NState: BRZ3
+Dest:  LoadCC:  REI: ALUop:       SrcA:        SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x100f  IR:     0x2a00  SP:     0xffff
+MAR:    0x100f  MDR     0x2a00  ZCNV:   1100
+==================================================
+cycle       16435
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: BRZ3  NState: FETCH
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1027  ALUInB: 0xxxxx  ALUOut: 0x1027
+PC:     0x100f  IR:     0x2a00  SP:     0xffff
+MAR:    0x100f  MDR     0x1027  ZCNV:   1100
+==================================================
+cycle       16436
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1027  ALUInB: 0xxxxx  ALUOut: 0x1027
+PC:     0x1027  IR:     0x2a00  SP:     0xffff
+MAR:    0x100f  MDR     0x1027  ZCNV:   1100
+==================================================
+cycle       16437
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1027  ALUInB: 0xxxxx  ALUOut: 0x1028
+PC:     0x1027  IR:     0x2a00  SP:     0xffff
+MAR:    0x1027  MDR     0x1027  ZCNV:   1100
+==================================================
+cycle       16438
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x3140  ALUInB: 0xxxxx  ALUOut: 0x3140
+PC:     0x1028  IR:     0x2a00  SP:     0xffff
+MAR:    0x1027  MDR     0x3140  ZCNV:   1100
+==================================================
+cycle       16439
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: RTNW
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x1028  IR:     0x3140  SP:     0xffff
+MAR:    0x1027  MDR     0x3140  ZCNV:   1100
+==================================================
+cycle       16440
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: RTNW  NState: RTN1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xffff  ALUInB: 0xxxxx  ALUOut: 0xffff
+PC:     0x1028  IR:     0x3140  SP:     0xffff
+MAR:    0x1027  MDR     0x3140  ZCNV:   1100
+==================================================
+cycle       16441
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: RTN1  NState: RTN2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xffff  ALUInB: 0xxxxx  ALUOut: 0x0000
+PC:     0x1028  IR:     0x3140  SP:     0xffff
+MAR:    0xffff  MDR     0x3140  ZCNV:   1100
+==================================================
+cycle       16442
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: RTN2  NState: FETCH
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x100a  ALUInB: 0xxxxx  ALUOut: 0x100a
+PC:     0x1028  IR:     0x3140  SP:     0x0000
+MAR:    0xffff  MDR     0x100a  ZCNV:   1100
+==================================================
+cycle       16443
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x100a  ALUInB: 0xxxxx  ALUOut: 0x100a
+PC:     0x100a  IR:     0x3140  SP:     0x0000
+MAR:    0xffff  MDR     0x100a  ZCNV:   1100
+==================================================
+cycle       16444
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x100a  ALUInB: 0xxxxx  ALUOut: 0x100b
+PC:     0x100a  IR:     0x3140  SP:     0x0000
+MAR:    0x100a  MDR     0x100a  ZCNV:   1100
+==================================================
+cycle       16445
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x2800  ALUInB: 0xxxxx  ALUOut: 0x2800
+PC:     0x100b  IR:     0x3140  SP:     0x0000
+MAR:    0x100a  MDR     0x2800  ZCNV:   1100
+==================================================
+cycle       16446
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: BRA
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x100b  IR:     0x2800  SP:     0x0000
+MAR:    0x100a  MDR     0x2800  ZCNV:   1100
+==================================================
+cycle       16447
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: BRA  NState: BRA1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x100b  ALUInB: 0xxxxx  ALUOut: 0x100b
+PC:     0x100b  IR:     0x2800  SP:     0x0000
+MAR:    0x100a  MDR     0x2800  ZCNV:   1100
+==================================================
+cycle       16448
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: BRA1  NState: BRA2
+Dest:  LoadCC:  REI: ALUop:       SrcA:        SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x100b  IR:     0x2800  SP:     0x0000
+MAR:    0x100b  MDR     0x2800  ZCNV:   1100
+==================================================
+cycle       16449
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: BRA2  NState: FETCH
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1028  ALUInB: 0xxxxx  ALUOut: 0x1028
+PC:     0x100b  IR:     0x2800  SP:     0x0000
+MAR:    0x100b  MDR     0x1028  ZCNV:   1100
+==================================================
+cycle       16450
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH  NState: FETCH1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1028  ALUInB: 0xxxxx  ALUOut: 0x1028
+PC:     0x1028  IR:     0x2800  SP:     0x0000
+MAR:    0x100b  MDR     0x1028  ZCNV:   1100
+==================================================
+cycle       16451
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH1  NState: FETCH2
+Dest:  LoadCC:  REI: ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1028  ALUInB: 0xxxxx  ALUOut: 0x1029
+PC:     0x1028  IR:     0x2800  SP:     0x0000
+MAR:    0x1028  MDR     0x1028  ZCNV:   1100
+==================================================
+cycle       16452
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: FETCH2  NState: DECODE
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x3000  ALUInB: 0xxxxx  ALUOut: 0x3000
+PC:     0x1029  IR:     0x2800  SP:     0x0000
+MAR:    0x1028  MDR     0x3000  ZCNV:   1100
+==================================================
+cycle       16453
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: DECODE  NState: STOP
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:       SrcA:        SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0xxxxx  ALUInB: 0xxxxx  ALUOut: 0xxxxx
+PC:     0x1029  IR:     0x3000  SP:     0x0000
+MAR:    0x1028  MDR     0x3000  ZCNV:   1100
+==================================================
+cycle       16454
+R0: 0x0000  R1: 0x0003  R2: 0x0000  R3: 0x0000
+R4: 0x0000  R5: 0x0000  R6: 0x0000  R7: 0x0000
+CState: STOP  NState: STOP1
+Dest:  LoadCC:  REI:  WEI: 
+ALUop:      SrcA:       SrcB:  
+AddrA: 0        AddrB: 0
+ALUInA: 0x1029  ALUInB: 0xxxxx  ALUOut: 0x1028
+PC:     0x1029  IR:     0x3000  SP:     0x0000
+MAR:    0x1028  MDR     0x3000  ZCNV:   1100
+==================================================
+STOP occurred at time               164550
+$finish called from file "controlpath.sv", line 177.
+$finish at simulation time               164550
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 164550
+CPU Time:      0.270 seconds;       Data structure size:   0.3Mb
+Mon Apr 28 17:14:00 2014

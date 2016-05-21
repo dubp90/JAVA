@@ -1,0 +1,116 @@
+addr data  label   opcode  operands
+---- ----  -----   ------  --------
+0000 0C00          LDI     R0 
+0001 0000                  $0 
+0002 0C09          LDI     R1 
+0003 0005                  size 
+0004 0C12          LDI     R2 
+0005 0000                  $0 
+0006 0C1B          LDI     R3 
+0007 0000                  $0 
+0008 3180          .DW     $3180 
+0009 0045          .DW     init 
+000A 3209  initw   PUSH    R1 
+000B 3100          .DW     $3100 
+000C 0013          .DW     tetraloopw 
+000D 3409          POP     R1 
+000E 3A16          MOV     R2 R6 
+000F 0C36          LDI     R6 
+0010 0000                  $0 
+0011 2800          BRA     
+0012 0071                  done 
+0013 4009  tetraloopw LDSF    R1 
+0014 0001                  $1 
+0015 4409          CMI     R1 
+0016 0000                  $0 
+0017 2A00          BRZ     
+0018 0044                  retw 
+0019 3A19          MOV     R3 R1 
+001A 321B          PUSH    R3 
+001B 3100          .DW     $3100 
+001C 0030          .DW     triloopw 
+001D 3409          POP     R1 
+001E 3224          PUSH    R4 
+001F 0C24          LDI     R4 
+0020 0000                  $0 
+0021 1609          DECR    R1 
+0022 3209          PUSH    R1 
+0023 3100          .DW     $3100 
+0024 0013          .DW     tetraloopw 
+0025 3A16          MOV     R2 R6 
+0026 0C36          LDI     R6 
+0027 0000                  $0 
+0028 3409          POP     R1 
+0029 3400          POP     R0 
+002A 0E10          ADD     R2 R0 
+002B 0C09          LDI     R1 
+002C 0000                  $0 
+002D 0C00          LDI     R0 
+002E 0000                  $0 
+002F 3140          .DW     $3140 
+0030 401B  triloopw LDSF    R3 
+0031 0001                  $1 
+0032 441B          CMI     R3 
+0033 0000                  $0 
+0034 2A00          BRZ     
+0035 0044                  retw 
+0036 321B          PUSH    R3 
+0037 161B          DECR    R3 
+0038 321B          PUSH    R3 
+0039 3100          .DW     $3100 
+003A 0030          .DW     triloopw 
+003B 341B          POP     R3 
+003C 341B          POP     R3 
+003D 0E23          ADD     R4 R3 
+003E 3A04          MOV     R0 R4 
+003F 0C24          LDI     R4 
+0040 0000                  $0 
+0041 0C1B          LDI     R3 
+0042 0000                  $0 
+0043 3140          .DW     $3140 
+0044 3140  retw    .DW     $3140 
+0045 3209  init    PUSH    R1 
+0046 3600          JSR     
+0047 004B                  tetraloop 
+0048 3409          POP     R1 
+0049 2800          BRA     
+004A 0071                  done 
+004B 4009  tetraloop LDSF    R1 
+004C 0001                  $1 
+004D 4409          CMI     R1 
+004E 0000                  $0 
+004F 2A00          BRZ     
+0050 0070                  ret 
+0051 3A19          MOV     R3 R1 
+0052 321B          PUSH    R3 
+0053 3600          JSR     
+0054 0061                  triloop 
+0055 341B          POP     R3 
+0056 3200          PUSH    R0 
+0057 0C00          LDI     R0 
+0058 0000                  $0 
+0059 1609          DECR    R1 
+005A 3209          PUSH    R1 
+005B 3600          JSR     
+005C 004B                  tetraloop 
+005D 3409          POP     R1 
+005E 3400          POP     R0 
+005F 0E10          ADD     R2 R0 
+0060 3800          RTN     
+0061 401B  triloop LDSF    R3 
+0062 0001                  $1 
+0063 441B          CMI     R3 
+0064 0000                  $0 
+0065 2A00          BRZ     
+0066 0070                  ret 
+0067 321B          PUSH    R3 
+0068 161B          DECR    R3 
+0069 321B          PUSH    R3 
+006A 3600          JSR     
+006B 0061                  triloop 
+006C 341B          POP     R3 
+006D 341B          POP     R3 
+006E 0E03          ADD     R0 R3 
+006F 3800          RTN     
+0070 3800  ret     RTN     
+0071 3000  done    STOP    

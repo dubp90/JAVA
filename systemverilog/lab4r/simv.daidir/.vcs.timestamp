@@ -1,0 +1,87 @@
+0 
+27
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags=
+-Mobjects= /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-gen_obj
+-picarchive
+-sverilog
+/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
+alu.sv
+constants.sv
+controlpath.sv
+datapath.sv
+library.sv
+p18240.sv
+regfile.sv
+42
+sysc_uni_pwd=/afs/ece.cmu.edu/usr/pdubey/Private/oldstuff/S14/lab4/lab4r
+XDG_SESSION_ID=299623
+XDG_RUNTIME_DIR=/run/user/19367
+VMR_MODE_FLAG=32
+VCS_TARGET_ARCH=amd64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LIC_EXPIRE_WARNING=0
+VCS_HOME=/usr/local/synopsys/vcs-mx_vJ-2014.12
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=amd64
+UNAME=/bin/uname
+TOOL_HOME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64
+SYN_DIR=/usr/local/synopsys/synopsys-2007.03-SP5
+SYNOPSYS=/usr/local/synopsys
+SSH_TTY=/dev/pts/4
+SSH_CONNECTION=67.165.106.220 54787 128.2.131.26 22
+SSH_CLIENT=67.165.106.220 54787 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QUARTUS_64BIT=1
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+OVA_UUM=0
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_CTYPE=UTF-8
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:19367
+KDEDIRS=/usr
+HISTCONTROL=ignoredups
+DC_HOME=/usr/local/synopsys/synopsys-2007.03-SP5/linux/syn
+CVS_RSH=ssh
+AKLOG=/usr/bin/aklog
+0
+7
+1398897189 regfile.sv
+1398756007 p18240.sv
+1398725128 library.sv
+1398896996 datapath.sv
+1398780685 controlpath.sv
+1398888770 constants.sv
+1398627516 alu.sv
+4
+0 
+1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
+1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
+1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+1461739069 simv.daidir

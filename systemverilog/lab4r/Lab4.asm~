@@ -1,0 +1,30 @@
+        .ORG    $0   
+        
+	LDI     R0, $0 ; This is i 
+	LDI	R3, $0 ; This is j
+	LDI 	R2, $0	; This is the sum of the Tetra 
+        LDI	R1, $0 	; This is the sum of the Trig
+	LDI	R7  $300 ; This is the array pointer for the triangle values
+        BRA     loop   ; jumps to main routine	
+array	.dw	$300	; 
+sizeTri	.dw 	$F 	; How large we want tri to calculate to
+sizeTetra .dw	$5	; How large we want tetra to calculate to
+	
+startTetra      .ORG	$2000
+checkFinish	CMI	R3, sizeTetra
+		BRZ	done;
+		LDI 	R4,sizeTetra	;
+		STA	$300, R4
+		INCR	R3;
+		BRA 	startTri;
+	
+startTri	.ORG    $1000
+Tloop   ADD     R1,R0   ; 
+        STR	R7,R1	;
+	INCR	R7	;
+	INCR 	R0  	; 
+        CMI     R0, sizeTri  ; Loop condition
+        BRZ     checkFinish    ; return Loop
+        BRA     Tloop    ; branch always ("go to")
+
+done    STOP            ; all done

@@ -1,0 +1,116 @@
+{
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 9641,
+            "mode": 4,
+            "archive": "archive.0/_13399_archive_1.a"
+        },
+        "KP7dQ_d": {
+            "mod": "p18240_top",
+            "out": "KP7dQ_d.o",
+            "bytes": 99474,
+            "mode": 4,
+            "archive": "archive.0/_13399_archive_1.a"
+        },
+        "DAC4W_d": {
+            "mod": "register",
+            "out": "DAC4W_d.o",
+            "bytes": 7728,
+            "mode": 4,
+            "archive": "archive.0/_13399_archive_1.a"
+        },
+        "fsfmV_d": {
+            "mod": "_vcs_unit__144784500",
+            "out": "fsfmV_d.o",
+            "bytes": 21821,
+            "mode": 4,
+            "archive": "archive.0/_13399_archive_1.a"
+        },
+        "DwY2P_d": {
+            "mod": "mux8to1",
+            "out": "DwY2P_d.o",
+            "bytes": 9971,
+            "mode": 4,
+            "archive": "archive.0/_13399_archive_1.a"
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "bytes": 29004,
+            "mode": 4,
+            "archive": "archive.0/_13399_archive_1.a"
+        },
+        "wDpck_d": {
+            "mod": "SevenSegmentDigit",
+            "out": "wDpck_d.o",
+            "bytes": 11481,
+            "mode": 4,
+            "archive": "archive.0/_13399_archive_1.a"
+        }
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "_vcs_unit__144784500": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "p18240_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "mux8to1": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "register": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "SevenSegmentDigit": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.0/_13399_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9641
+                ],
+                [
+                    "fsfmV_d.o",
+                    21821
+                ],
+                [
+                    "reYIK_d.o",
+                    29004
+                ],
+                [
+                    "DwY2P_d.o",
+                    9971
+                ],
+                [
+                    "DAC4W_d.o",
+                    7728
+                ],
+                [
+                    "wDpck_d.o",
+                    11481
+                ],
+                [
+                    "KP7dQ_d.o",
+                    99474
+                ]
+            ],
+            "size": 189120
+        }
+    ]
+}

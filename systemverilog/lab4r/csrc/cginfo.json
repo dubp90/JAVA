@@ -1,0 +1,76 @@
+{
+    "MlibObjs": {},
+    "CompileStatus": "Successful",
+    "CompileProcesses": [
+        "cgproc.13399.json"
+    ],
+    "PrevCompiledModules": {},
+    "Misc": {
+        "csrc_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/oldstuff/S14/lab4/lab4r/csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/pdubey/Private/oldstuff/S14/lab4/lab4r",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "archive_dir": "archive.0",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/oldstuff/S14/lab4/lab4r/simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "NameTable": {
+        "_vcs_unit__144784500": [
+            "_vcs_unit__144784500",
+            "fsfmV",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "p18240_top": [
+            "p18240_top",
+            "KP7dQ",
+            "module"
+        ],
+        "mux8to1": [
+            "mux8to1",
+            "DwY2P",
+            "module"
+        ],
+        "register": [
+            "register",
+            "DAC4W",
+            "module"
+        ],
+        "SevenSegmentDigit": [
+            "SevenSegmentDigit",
+            "wDpck",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 58979
+    },
+    "PEModules": [],
+    "CurCompileModules": [
+        "...MASTER...",
+        "_vcs_unit__144784500",
+        "std",
+        "mux8to1",
+        "register",
+        "SevenSegmentDigit",
+        "p18240_top"
+    ],
+    "stat": {
+        "nMops": 10285
+    }
+}

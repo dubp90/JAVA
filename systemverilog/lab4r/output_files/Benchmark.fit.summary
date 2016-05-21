@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Apr 17 20:53:17 2014
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : Benchmark
+Top-level Entity Name : p18240_top
+Family : Cyclone IV GX
+Device : EP4CGX22CF19C6
+Timing Models : Final
+Total logic elements : 1,272 / 21,280 ( 6 % )
+    Total combinational functions : 1,197 / 21,280 ( 6 % )
+    Dedicated logic registers : 388 / 21,280 ( 2 % )
+Total registers : 388
+Total pins : 105 / 167 ( 63 % )
+Total virtual pins : 0
+Total memory bits : 12,288 / 774,144 ( 2 % )
+Embedded Multiplier 9-bit elements : 0 / 80 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 4 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 4 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

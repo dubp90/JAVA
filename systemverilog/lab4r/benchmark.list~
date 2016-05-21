@@ -1,0 +1,43 @@
+addr data  label   opcode  operands
+---- ----  -----   ------  --------
+0000 0C00          LDI     R0 
+0001 0000                  $0 
+0002 0C09          LDI     R1 
+0003 0003                  size 
+0004 0C12          LDI     R2 
+0005 0000                  $0 
+0006 0C1B          LDI     R3 
+0007 0000                  $0 
+0008 3100          .DW     $3100 
+0009 000C          .DW     tetraloop 
+000A 2800          BRA     
+000B 0028                  done 
+000C 4409  tetraloop CMI     R1 
+000D 0000                  $0 
+000E 2A00          BRZ     
+000F 0027                  ret 
+0010 3A19          MOV     R3 R1 
+0011 3100          .DW     $3100 
+0012 001C          .DW     triloop 
+0013 3200          PUSH    R0 
+0014 0C00          LDI     R0 
+0015 0000                  $0 
+0016 1609          DECR    R1 
+0017 3100          .DW     $3100 
+0018 000C          .DW     tetraloop 
+0019 3400          POP     R0 
+001A 0E10          ADD     R2 R0 
+001B 3140          .DW     $3140 
+001C 441B  triloop CMI     R3 
+001D 0000                  $0 
+001E 2A00          BRZ     
+001F 0027                  ret 
+0020 321B          PUSH    R3 
+0021 161B          DECR    R3 
+0022 3100          .DW     $3100 
+0023 001C          .DW     triloop 
+0024 341B          POP     R3 
+0025 0E03          ADD     R0 R3 
+0026 3140          .DW     $3140 
+0027 3140  ret     .DW     $3140 
+0028 3000  done    STOP    
