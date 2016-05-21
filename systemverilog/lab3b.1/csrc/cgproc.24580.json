@@ -1,0 +1,132 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "mux": {
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "assertSingleCycle": {
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "coinAcceptor_test": {
+            "Compiled Times": 4,
+            "Compiled": "Yes"
+        },
+        "decoder": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "comparator": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "shiftRegister3BitsPIPO": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "counter": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "RZvU4_d": {
+            "mod": "mux",
+            "out": "RZvU4_d.o",
+            "archive": "archive.6/_24580_archive_1.a",
+            "bytes": 6414,
+            "mode": 4
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "archive": "archive.6/_24580_archive_1.a",
+            "bytes": 9729,
+            "mode": 4
+        },
+        "UmykR_d": {
+            "mod": "coinAcceptor_test",
+            "out": "UmykR_d.o",
+            "archive": "archive.6/_24580_archive_1.a",
+            "bytes": 51876,
+            "mode": 4
+        },
+        "TUxgL_d": {
+            "mod": "shiftRegister3BitsPIPO",
+            "out": "TUxgL_d.o",
+            "archive": "archive.6/_24580_archive_1.a",
+            "bytes": 8174,
+            "mode": 4
+        },
+        "U57Qt_d": {
+            "mod": "comparator",
+            "out": "U57Qt_d.o",
+            "archive": "archive.6/_24580_archive_1.a",
+            "bytes": 6913,
+            "mode": 4
+        },
+        "zf0bY_d": {
+            "mod": "decoder",
+            "out": "zf0bY_d.o",
+            "archive": "archive.6/_24580_archive_1.a",
+            "bytes": 7911,
+            "mode": 4
+        },
+        "MQn6b_d": {
+            "mod": "counter",
+            "out": "MQn6b_d.o",
+            "archive": "archive.6/_24580_archive_1.a",
+            "bytes": 8075,
+            "mode": 4
+        },
+        "jerSV_d": {
+            "mod": "assertSingleCycle",
+            "out": "jerSV_d.o",
+            "archive": "archive.6/_24580_archive_1.a",
+            "bytes": 13018,
+            "mode": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.6/_24580_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9729
+                ],
+                [
+                    "UmykR_d.o",
+                    51876
+                ],
+                [
+                    "U57Qt_d.o",
+                    6913
+                ],
+                [
+                    "zf0bY_d.o",
+                    7911
+                ],
+                [
+                    "RZvU4_d.o",
+                    6414
+                ],
+                [
+                    "MQn6b_d.o",
+                    8075
+                ],
+                [
+                    "TUxgL_d.o",
+                    8174
+                ],
+                [
+                    "jerSV_d.o",
+                    13018
+                ]
+            ],
+            "size": 112110
+        }
+    ]
+}

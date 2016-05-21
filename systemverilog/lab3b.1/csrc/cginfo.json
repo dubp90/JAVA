@@ -1,0 +1,133 @@
+{
+    "MlibObjs": {},
+    "CompileProcesses": [
+        "cgproc.24580.json"
+    ],
+    "PrevCompiledModules": {
+        "assertSingleCycle": {
+            "jerSV_d": {
+                "archive": "archive.6/_24580_archive_1.a",
+                "bytes": 13029,
+                "mod": "assertSingleCycle",
+                "out": "jerSV_d.o",
+                "mode": 4
+            }
+        },
+        "mux": {
+            "RZvU4_d": {
+                "archive": "archive.6/_24580_archive_1.a",
+                "bytes": 6495,
+                "mod": "mux",
+                "out": "RZvU4_d.o",
+                "mode": 4
+            }
+        },
+        "coinAcceptor_test": {
+            "UmykR_d": {
+                "archive": "archive.6/_24580_archive_1.a",
+                "bytes": 38725,
+                "mod": "coinAcceptor_test",
+                "out": "UmykR_d.o",
+                "mode": 4
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "archive": "archive.6/_prev_archive_1.a",
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "archive": "archive.6/_24580_archive_1.a",
+                "bytes": 9526,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4
+            }
+        }
+    },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 64183
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "coinAcceptor_test",
+        "comparator",
+        "decoder",
+        "mux",
+        "counter",
+        "shiftRegister3BitsPIPO",
+        "assertSingleCycle"
+    ],
+    "CurCompileUdps": {},
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "coinAcceptor_test": [
+            "coinAcceptor_test",
+            "UmykR",
+            "module"
+        ],
+        "decoder": [
+            "decoder",
+            "zf0bY",
+            "module"
+        ],
+        "assertSingleCycle": [
+            "assertSingleCycle",
+            "jerSV",
+            "module"
+        ],
+        "mux": [
+            "mux",
+            "RZvU4",
+            "module"
+        ],
+        "comparator": [
+            "comparator",
+            "U57Qt",
+            "module"
+        ],
+        "shiftRegister3BitsPIPO": [
+            "shiftRegister3BitsPIPO",
+            "TUxgL",
+            "module"
+        ],
+        "counter": [
+            "counter",
+            "MQn6b",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "Misc": {
+        "default_output_dir": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3b/lab3b",
+        "archive_dir": "archive.6",
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3b/lab3b/simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3b/lab3b/csrc"
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "stat": {
+        "nMops": 3804
+    },
+    "CompileStatus": "Successful"
+}

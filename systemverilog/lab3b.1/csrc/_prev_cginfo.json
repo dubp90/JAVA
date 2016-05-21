@@ -1,0 +1,130 @@
+{
+    "PrevCompiledModules": {
+        "coinAcceptor_test": {
+            "UmykR_d": {
+                "bytes": 51876,
+                "archive": "archive.5/_17120_archive_1.a",
+                "mod": "coinAcceptor_test",
+                "mode": 4,
+                "out": "UmykR_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "archive": "archive.5/_prev_archive_1.a",
+                "mod": "std",
+                "out": "reYIK_d.o",
+                "mode": 4
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 9428,
+                "archive": "archive.5/_17120_archive_1.a",
+                "mod": "...MASTER...",
+                "mode": 4,
+                "out": "amcQw_d.o"
+            }
+        },
+        "mux": {
+            "RZvU4_d": {
+                "bytes": 6414,
+                "archive": "archive.5/_17120_archive_1.a",
+                "mod": "mux",
+                "out": "RZvU4_d.o",
+                "mode": 4
+            }
+        }
+    },
+    "CurCompileUdps": {},
+    "MlibObjs": {},
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "nMops": 16331
+    },
+    "NameTable": {
+        "coinAcceptor_test": [
+            "coinAcceptor_test",
+            "UmykR",
+            "module"
+        ],
+        "Tester": [
+            "Tester",
+            "QZwzh",
+            "module"
+        ],
+        "_vcs_unit__2957541081": [
+            "_vcs_unit__2957541081",
+            "wm5Em",
+            "module"
+        ],
+        "ChipInterface": [
+            "ChipInterface",
+            "VHM6x",
+            "module"
+        ],
+        "assertSingleCycle": [
+            "assertSingleCycle",
+            "jerSV",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "coinAcceptor": [
+            "coinAcceptor",
+            "s1HVQ",
+            "module"
+        ],
+        "mux": [
+            "mux",
+            "RZvU4",
+            "module"
+        ],
+        "SevenSegmentDigit": [
+            "SevenSegmentDigit",
+            "wDpck",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 64359
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "_vcs_unit__2957541081",
+        "ChipInterface",
+        "coinAcceptor",
+        "coinAcceptor_test",
+        "mux",
+        "assertSingleCycle",
+        "SevenSegmentDigit",
+        "Tester"
+    ],
+    "Misc": {
+        "default_output_dir": "csrc",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3b/lab3b/csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3b/lab3b",
+        "csrc": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3b/lab3b/simv.daidir",
+        "archive_dir": "archive.5"
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.17120.json"
+    ],
+    "CompileStatus": "Successful"
+}

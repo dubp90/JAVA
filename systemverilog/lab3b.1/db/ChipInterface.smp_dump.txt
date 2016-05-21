@@ -1,0 +1,44 @@
+
+State Machine - |ChipInterface|game:g|game_fsm:g4|cs
+Name cs.results cs.check cs.loadmp cs.coin 
+cs.coin 0 0 0 0 
+cs.loadmp 0 0 1 1 
+cs.check 0 1 0 1 
+cs.results 1 0 0 1 
+
+State Machine - |ChipInterface|game:g|allChecks:g3|singleCheck:g1|singleCheck_fsm:g8|cs
+Name cs.waiting cs.done cs.zood cs.Sshift cs.Sload cs.znarly cs.loading cs.init cs.zzdone 
+cs.init 0 0 0 0 0 0 0 0 0 
+cs.loading 0 0 0 0 0 0 1 1 0 
+cs.znarly 0 0 0 0 0 1 0 1 0 
+cs.Sload 0 0 0 0 1 0 0 1 0 
+cs.Sshift 0 0 0 1 0 0 0 1 0 
+cs.zood 0 0 1 0 0 0 0 1 0 
+cs.done 0 1 0 0 0 0 0 1 0 
+cs.waiting 1 0 0 0 0 0 0 1 0 
+cs.zzdone 0 0 0 0 0 0 0 1 1 
+
+State Machine - |ChipInterface|game:g|coinAcceptor:g1|coinAcceptor_fsm:g5|cs
+Name cs.D cs.C cs.B cs.A 
+cs.A 0 0 0 0 
+cs.B 0 0 1 1 
+cs.C 0 1 0 1 
+cs.D 1 0 0 1 
+
+State Machine - |ChipInterface|assertSingleCycle:lsn|cs
+Name cs.A cs.C cs.B 
+cs.A 0 0 0 
+cs.B 1 0 1 
+cs.C 1 1 0 
+
+State Machine - |ChipInterface|assertSingleCycle:sg|cs
+Name cs.A cs.C cs.B 
+cs.A 0 0 0 
+cs.B 1 0 1 
+cs.C 1 1 0 
+
+State Machine - |ChipInterface|assertSingleCycle:ci|cs
+Name cs.A cs.C cs.B 
+cs.A 0 0 0 
+cs.B 1 0 1 
+cs.C 1 1 0 

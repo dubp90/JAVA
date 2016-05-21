@@ -1,0 +1,47 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "coinAcceptor_test": [
+        "coinAcceptor_test",
+        "UmykR",
+        "module"
+    ],
+    "decoder": [
+        "decoder",
+        "zf0bY",
+        "module"
+    ],
+    "assertSingleCycle": [
+        "assertSingleCycle",
+        "jerSV",
+        "module"
+    ],
+    "mux": [
+        "mux",
+        "RZvU4",
+        "module"
+    ],
+    "comparator": [
+        "comparator",
+        "U57Qt",
+        "module"
+    ],
+    "shiftRegister3BitsPIPO": [
+        "shiftRegister3BitsPIPO",
+        "TUxgL",
+        "module"
+    ],
+    "counter": [
+        "counter",
+        "MQn6b",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ]
+}
