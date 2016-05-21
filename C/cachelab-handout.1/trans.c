@@ -64,10 +64,114 @@ void trans(int M, int N, int A[N][M], int B[M][N]){
 // Please do not change this description
 char transpose_submit_desc[] = "Part (b) Submit";
 void transpose_submit(int M, int N, int A[N][M], int B[M][N]){
+    int i, j, row, col, row_block, col_block; 
     REQUIRES(M > 0);
     REQUIRES(N > 0);
+    switch(N){
+        case 32:
+            
+            for (row = 0; row < 32; row += 8){
+                for(col = 0; col < 32; col += 8){
+                    if(row != col){
+                        for(i = row; i < row + 8; i++){
+                            for(j = col; j < col + 8; j++){
+                                B[j][i] = A[i][j];
+                            }
+                        }
+                    }
+                }
+            }
+            for (row = 0; row < 32; row += 8){
+                for(i = row; i < row + 8; i++){
+                    for(j = row; j < row + 8; j++){ 
+                        if(i != j){
+                            B[j][i] = A[i][j];
+                        }
+                    }
+                    B[i][i] = A[i][i];
+                }                       
+            }
+        
+            break;
 
+        case 64:
+
+            for(row = 0; row < 64; row += 8){
+                for(col = 0; col < 64; col += 8){
+                    if(row != col){
+                        row_block = row;
+                        for(col_block = col; col_block < col + 5; col_block += 4){
+                            for(i = row_block; i < row_block + 4; i++){
+                                for(j = col_block; j < col_block + 4; j++){
+                                    B[j][i] = A[i][j];
+                                }
+                            }
+                        } 
+                        row_block = row + 4;
+                        for(col_block = col + 4; col_block > col - 1; col_block -= 4){
+                            for(i = row_block; i < row_block + 4; i++){
+                                for(j = col_block; j < col_block + 4; j++){
+                                    B[j][i] = A[i][j];
+                                }               
+                            }       
+                        }
+                    }   
+                }       
+            }
+            for(row = 0; row < 64; row += 8){
+                row_block = row;
+                for(i = row_block; i < row_block + 4; i++){
+                    for(j = row_block; j < row_block + 4; j++){
+                        if(i != j){
+                            B[j][i] = A[i][j];
+                        }
+                    }
+                    B[i][i] = A[i][i];
+                }
+                for(i = row_block; i < row_block + 4; i++){
+                    for(j = row_block + 4; j < row_block + 8; j++){
+                        B[j][i] = A[i][j];
+                    }
+                }
+                row_block = row + 4;
+                for(i = row_block; i < row_block + 4; i++){
+                    for(j = row_block; j < row_block + 4; j++){
+                        if(i != j){
+                            B[j][i] = A[i][j];
+                        }
+                    }
+                    B[i][i] = A[i][i];
+                }
+                for(i = row_block; i < row_block + 4; i++){
+                    for(j = row_block - 4; j < row_block; j++){
+                        B[j][i] = A[i][j];
+                    }
+                }               
+            }       
+            break;
+
+        case 67:
+
+            for(row = 0; row < 61; row += 8){
+                for(col = 0; col < 67; col += 8){
+                    for(i = col; i < col + 8; i++){
+                        if(i >= 67){
+                            break;
+                        }
+                        for(j = row; j < row + 8; j++){
+                            if(j >= 61){
+                                break;
+                            }
+                            B[j][i] = A[i][j];
+                        }
+                    }
+                }
+            }
+            break;
+    }
+    
     ENSURES(is_transpose(M, N, A, B));
+
 }
 
 ////////////// Declare and test your own transpose functions here////////
