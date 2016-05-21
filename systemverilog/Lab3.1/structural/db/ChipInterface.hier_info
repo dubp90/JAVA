@@ -1,0 +1,525 @@
+|ChipInterface
+HEX7[0] <= SevenSegmentControl:ssc.port0
+HEX7[1] <= SevenSegmentControl:ssc.port0
+HEX7[2] <= SevenSegmentControl:ssc.port0
+HEX7[3] <= SevenSegmentControl:ssc.port0
+HEX7[4] <= SevenSegmentControl:ssc.port0
+HEX7[5] <= SevenSegmentControl:ssc.port0
+HEX7[6] <= SevenSegmentControl:ssc.port0
+HEX6[0] <= SevenSegmentControl:ssc.port1
+HEX6[1] <= SevenSegmentControl:ssc.port1
+HEX6[2] <= SevenSegmentControl:ssc.port1
+HEX6[3] <= SevenSegmentControl:ssc.port1
+HEX6[4] <= SevenSegmentControl:ssc.port1
+HEX6[5] <= SevenSegmentControl:ssc.port1
+HEX6[6] <= SevenSegmentControl:ssc.port1
+HEX5[0] <= SevenSegmentControl:ssc.port2
+HEX5[1] <= SevenSegmentControl:ssc.port2
+HEX5[2] <= SevenSegmentControl:ssc.port2
+HEX5[3] <= SevenSegmentControl:ssc.port2
+HEX5[4] <= SevenSegmentControl:ssc.port2
+HEX5[5] <= SevenSegmentControl:ssc.port2
+HEX5[6] <= SevenSegmentControl:ssc.port2
+HEX4[0] <= SevenSegmentControl:ssc.port3
+HEX4[1] <= SevenSegmentControl:ssc.port3
+HEX4[2] <= SevenSegmentControl:ssc.port3
+HEX4[3] <= SevenSegmentControl:ssc.port3
+HEX4[4] <= SevenSegmentControl:ssc.port3
+HEX4[5] <= SevenSegmentControl:ssc.port3
+HEX4[6] <= SevenSegmentControl:ssc.port3
+HEX3[0] <= SevenSegmentControl:ssc.port4
+HEX3[1] <= SevenSegmentControl:ssc.port4
+HEX3[2] <= SevenSegmentControl:ssc.port4
+HEX3[3] <= SevenSegmentControl:ssc.port4
+HEX3[4] <= SevenSegmentControl:ssc.port4
+HEX3[5] <= SevenSegmentControl:ssc.port4
+HEX3[6] <= SevenSegmentControl:ssc.port4
+HEX2[0] <= SevenSegmentControl:ssc.port5
+HEX2[1] <= SevenSegmentControl:ssc.port5
+HEX2[2] <= SevenSegmentControl:ssc.port5
+HEX2[3] <= SevenSegmentControl:ssc.port5
+HEX2[4] <= SevenSegmentControl:ssc.port5
+HEX2[5] <= SevenSegmentControl:ssc.port5
+HEX2[6] <= SevenSegmentControl:ssc.port5
+HEX1[0] <= SevenSegmentControl:ssc.port6
+HEX1[1] <= SevenSegmentControl:ssc.port6
+HEX1[2] <= SevenSegmentControl:ssc.port6
+HEX1[3] <= SevenSegmentControl:ssc.port6
+HEX1[4] <= SevenSegmentControl:ssc.port6
+HEX1[5] <= SevenSegmentControl:ssc.port6
+HEX1[6] <= SevenSegmentControl:ssc.port6
+HEX0[0] <= SevenSegmentControl:ssc.port7
+HEX0[1] <= SevenSegmentControl:ssc.port7
+HEX0[2] <= SevenSegmentControl:ssc.port7
+HEX0[3] <= SevenSegmentControl:ssc.port7
+HEX0[4] <= SevenSegmentControl:ssc.port7
+HEX0[5] <= SevenSegmentControl:ssc.port7
+HEX0[6] <= SevenSegmentControl:ssc.port7
+LEDR[0] <= myExplicitFSM:fsm.drop
+LEDR[1] <= myExplicitFSM:fsm.drop
+LEDR[2] <= myExplicitFSM:fsm.drop
+LEDR[3] <= myExplicitFSM:fsm.drop
+LEDR[4] <= myExplicitFSM:fsm.drop
+LEDR[5] <= myExplicitFSM:fsm.drop
+LEDR[6] <= myExplicitFSM:fsm.drop
+LEDR[7] <= myExplicitFSM:fsm.drop
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= <GND>
+LEDR[15] <= <GND>
+LEDR[16] <= <GND>
+LEDR[17] <= <GND>
+SW[0] => myExplicitFSM:fsm.coin[0]
+SW[1] => myExplicitFSM:fsm.coin[1]
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => myExplicitFSM:fsm.reset
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
+KEY[0] => myExplicitFSM:fsm.clock
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+
+
+|ChipInterface|myExplicitFSM:fsm
+coin[0] => d2.IN0
+coin[0] => d2.IN1
+coin[0] => d1.IN1
+coin[0] => d1.IN1
+coin[0] => d0.IN1
+coin[0] => d1.IN1
+coin[0] => d1.IN1
+coin[0] => d1.IN1
+coin[0] => d0.IN1
+coin[1] => d2.IN1
+coin[1] => d2.IN1
+coin[1] => d2.IN1
+coin[1] => d1.IN1
+coin[1] => d0.IN1
+coin[1] => d1.IN1
+coin[1] => d0.IN1
+drop <= dFlipFlop:ff2.q
+credit[0] <= dFlipFlop:ff0.q
+credit[1] <= dFlipFlop:ff1.q
+credit[2] <= <GND>
+credit[3] <= <GND>
+clock => clock.IN3
+reset => reset.IN3
+
+
+|ChipInterface|myExplicitFSM:fsm|dFlipFlop:ff2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+
+
+|ChipInterface|myExplicitFSM:fsm|dFlipFlop:ff1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+
+
+|ChipInterface|myExplicitFSM:fsm|dFlipFlop:ff0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+
+
+|ChipInterface|SevenSegmentControl:ssc
+HEX7[0] <= SevenSegmentDigit:H7.port1
+HEX7[1] <= SevenSegmentDigit:H7.port1
+HEX7[2] <= SevenSegmentDigit:H7.port1
+HEX7[3] <= SevenSegmentDigit:H7.port1
+HEX7[4] <= SevenSegmentDigit:H7.port1
+HEX7[5] <= SevenSegmentDigit:H7.port1
+HEX7[6] <= SevenSegmentDigit:H7.port1
+HEX6[0] <= SevenSegmentDigit:H6.port1
+HEX6[1] <= SevenSegmentDigit:H6.port1
+HEX6[2] <= SevenSegmentDigit:H6.port1
+HEX6[3] <= SevenSegmentDigit:H6.port1
+HEX6[4] <= SevenSegmentDigit:H6.port1
+HEX6[5] <= SevenSegmentDigit:H6.port1
+HEX6[6] <= SevenSegmentDigit:H6.port1
+HEX5[0] <= SevenSegmentDigit:H5.port1
+HEX5[1] <= SevenSegmentDigit:H5.port1
+HEX5[2] <= SevenSegmentDigit:H5.port1
+HEX5[3] <= SevenSegmentDigit:H5.port1
+HEX5[4] <= SevenSegmentDigit:H5.port1
+HEX5[5] <= SevenSegmentDigit:H5.port1
+HEX5[6] <= SevenSegmentDigit:H5.port1
+HEX4[0] <= SevenSegmentDigit:H4.port1
+HEX4[1] <= SevenSegmentDigit:H4.port1
+HEX4[2] <= SevenSegmentDigit:H4.port1
+HEX4[3] <= SevenSegmentDigit:H4.port1
+HEX4[4] <= SevenSegmentDigit:H4.port1
+HEX4[5] <= SevenSegmentDigit:H4.port1
+HEX4[6] <= SevenSegmentDigit:H4.port1
+HEX3[0] <= SevenSegmentDigit:H3.port1
+HEX3[1] <= SevenSegmentDigit:H3.port1
+HEX3[2] <= SevenSegmentDigit:H3.port1
+HEX3[3] <= SevenSegmentDigit:H3.port1
+HEX3[4] <= SevenSegmentDigit:H3.port1
+HEX3[5] <= SevenSegmentDigit:H3.port1
+HEX3[6] <= SevenSegmentDigit:H3.port1
+HEX2[0] <= SevenSegmentDigit:H2.port1
+HEX2[1] <= SevenSegmentDigit:H2.port1
+HEX2[2] <= SevenSegmentDigit:H2.port1
+HEX2[3] <= SevenSegmentDigit:H2.port1
+HEX2[4] <= SevenSegmentDigit:H2.port1
+HEX2[5] <= SevenSegmentDigit:H2.port1
+HEX2[6] <= SevenSegmentDigit:H2.port1
+HEX1[0] <= SevenSegmentDigit:H1.port1
+HEX1[1] <= SevenSegmentDigit:H1.port1
+HEX1[2] <= SevenSegmentDigit:H1.port1
+HEX1[3] <= SevenSegmentDigit:H1.port1
+HEX1[4] <= SevenSegmentDigit:H1.port1
+HEX1[5] <= SevenSegmentDigit:H1.port1
+HEX1[6] <= SevenSegmentDigit:H1.port1
+HEX0[0] <= SevenSegmentDigit:H0.port1
+HEX0[1] <= SevenSegmentDigit:H0.port1
+HEX0[2] <= SevenSegmentDigit:H0.port1
+HEX0[3] <= SevenSegmentDigit:H0.port1
+HEX0[4] <= SevenSegmentDigit:H0.port1
+HEX0[5] <= SevenSegmentDigit:H0.port1
+HEX0[6] <= SevenSegmentDigit:H0.port1
+BCD7[0] => BCD7[0].IN1
+BCD7[1] => BCD7[1].IN1
+BCD7[2] => BCD7[2].IN1
+BCD7[3] => BCD7[3].IN1
+BCD6[0] => BCD6[0].IN1
+BCD6[1] => BCD6[1].IN1
+BCD6[2] => BCD6[2].IN1
+BCD6[3] => BCD6[3].IN1
+BCD5[0] => BCD5[0].IN1
+BCD5[1] => BCD5[1].IN1
+BCD5[2] => BCD5[2].IN1
+BCD5[3] => BCD5[3].IN1
+BCD4[0] => BCD4[0].IN1
+BCD4[1] => BCD4[1].IN1
+BCD4[2] => BCD4[2].IN1
+BCD4[3] => BCD4[3].IN1
+BCD3[0] => BCD3[0].IN1
+BCD3[1] => BCD3[1].IN1
+BCD3[2] => BCD3[2].IN1
+BCD3[3] => BCD3[3].IN1
+BCD2[0] => BCD2[0].IN1
+BCD2[1] => BCD2[1].IN1
+BCD2[2] => BCD2[2].IN1
+BCD2[3] => BCD2[3].IN1
+BCD1[0] => BCD1[0].IN1
+BCD1[1] => BCD1[1].IN1
+BCD1[2] => BCD1[2].IN1
+BCD1[3] => BCD1[3].IN1
+BCD0[0] => BCD0[0].IN1
+BCD0[1] => BCD0[1].IN1
+BCD0[2] => BCD0[2].IN1
+BCD0[3] => BCD0[3].IN1
+turn_on[0] => _.IN1
+turn_on[1] => _.IN1
+turn_on[2] => _.IN1
+turn_on[3] => _.IN1
+turn_on[4] => _.IN1
+turn_on[5] => _.IN1
+turn_on[6] => _.IN1
+turn_on[7] => _.IN1
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H7
+bcd[0] => bcd[0].IN1
+bcd[1] => bcd[1].IN1
+bcd[2] => bcd[2].IN1
+bcd[3] => bcd[3].IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H7|BCDtoSevenSegment:b2ss
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H6
+bcd[0] => bcd[0].IN1
+bcd[1] => bcd[1].IN1
+bcd[2] => bcd[2].IN1
+bcd[3] => bcd[3].IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H6|BCDtoSevenSegment:b2ss
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H5
+bcd[0] => bcd[0].IN1
+bcd[1] => bcd[1].IN1
+bcd[2] => bcd[2].IN1
+bcd[3] => bcd[3].IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H5|BCDtoSevenSegment:b2ss
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H4
+bcd[0] => bcd[0].IN1
+bcd[1] => bcd[1].IN1
+bcd[2] => bcd[2].IN1
+bcd[3] => bcd[3].IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H4|BCDtoSevenSegment:b2ss
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H3
+bcd[0] => bcd[0].IN1
+bcd[1] => bcd[1].IN1
+bcd[2] => bcd[2].IN1
+bcd[3] => bcd[3].IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H3|BCDtoSevenSegment:b2ss
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H2
+bcd[0] => bcd[0].IN1
+bcd[1] => bcd[1].IN1
+bcd[2] => bcd[2].IN1
+bcd[3] => bcd[3].IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H2|BCDtoSevenSegment:b2ss
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H1
+bcd[0] => bcd[0].IN1
+bcd[1] => bcd[1].IN1
+bcd[2] => bcd[2].IN1
+bcd[3] => bcd[3].IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H1|BCDtoSevenSegment:b2ss
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H0
+bcd[0] => bcd[0].IN1
+bcd[1] => bcd[1].IN1
+bcd[2] => bcd[2].IN1
+bcd[3] => bcd[3].IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+blank => segment.OUTPUTSELECT
+
+
+|ChipInterface|SevenSegmentControl:ssc|SevenSegmentDigit:H0|BCDtoSevenSegment:b2ss
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

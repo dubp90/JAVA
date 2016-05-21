@@ -1,0 +1,62 @@
+{
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "ChipInterface": [
+            "ChipInterface",
+            "VHM6x",
+            "module"
+        ],
+        "Tester": [
+            "Tester",
+            "QZwzh",
+            "module"
+        ],
+        "SevenSegmentDigit": [
+            "SevenSegmentDigit",
+            "wDpck",
+            "module"
+        ]
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 62236
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "CompileStatus": "Successful",
+    "CompileProcesses": [
+        "cgproc.26558.json"
+    ],
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "ChipInterface",
+        "SevenSegmentDigit",
+        "Tester"
+    ],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/coinAccepter",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/coinAccepter/csrc",
+        "archive_dir": "archive.0",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/coinAccepter/simv.daidir",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "stat": {
+        "nMops": 4307
+    }
+}

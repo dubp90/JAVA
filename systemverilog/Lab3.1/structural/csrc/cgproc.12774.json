@@ -1,0 +1,71 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.0/_12774_archive_1.a",
+            "size": 98604,
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7328
+                ],
+                [
+                    "reYIK_d.o",
+                    30047
+                ],
+                [
+                    "fhqgw_d.o",
+                    7554
+                ],
+                [
+                    "Emx8S_d.o",
+                    53675
+                ]
+            ]
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {},
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "dFlipFlop": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "reYIK_d": {
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "archive": "archive.0/_12774_archive_1.a",
+            "mode": 4,
+            "bytes": 30047
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "archive": "archive.0/_12774_archive_1.a",
+            "mode": 4,
+            "bytes": 7328
+        },
+        "fhqgw_d": {
+            "mod": "dFlipFlop",
+            "out": "fhqgw_d.o",
+            "archive": "archive.0/_12774_archive_1.a",
+            "mode": 4,
+            "bytes": 7554
+        },
+        "Emx8S_d": {
+            "mod": "top",
+            "out": "Emx8S_d.o",
+            "archive": "archive.0/_12774_archive_1.a",
+            "mode": 4,
+            "bytes": 53675
+        }
+    }
+}

@@ -1,0 +1,13 @@
+Design Module List
+
+Total Module Definition Coverage Summary 
+SCORE  LINE   
+100.00 100.00 
+
+
+Total modules in report: 2
+-------------------------------------------------------------------------------
+SCORE  LINE   NAME              
+100.00 100.00 myMoreAbstractFSM 
+100.00 100.00 fsmTestBench      
+

@@ -1,0 +1,416 @@
+===============================================================================
+Module : myMoreAbstractFSM
+===============================================================================
+SCORE  LINE   
+100.00 100.00 
+
+Source File(s) : 
+
+/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/abstract/myMoreAbstractFSM.sv
+
+Module self-instances :
+
+SCORE  LINE   NAME             
+100.00 100.00 fsmTestBench.dut 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : myMoreAbstractFSM
+
+             Line No.   Total   Covered  Percent
+TOTAL                       61       61   100.00
+ALWAYS             14        3        3   100.00
+ALWAYS             20       41       41   100.00
+ALWAYS             89       17       17   100.00
+
+13                      	always_ff @(posedge clock)
+14         1/1          		if (reset)
+15         1/1          			cs <= A;
+16                      		else
+17         1/1          			cs <= ns;
+18                      
+19                      	always_comb begin
+20         1/1          		unique case (cs)
+21                      			A: begin
+22         1/1          				unique case (coin)
+23         1/1          					2'b00: ns = A;
+24         1/1          					2'b01: ns = B;
+25         1/1          					2'b10: ns = D;
+26         1/1          					2'b11: ns = F;
+                   ==>  MISSING_DEFAULT
+27                      				endcase
+28                      			   end
+29                      			B: begin
+30         1/1                                          unique case (coin)
+31         1/1                                                  2'b00: ns = B;
+32         1/1                                                  2'b01: ns = C;
+33         1/1                                                  2'b10: ns = E;
+34         1/1                                                  2'b11: ns = G;
+                   ==>  MISSING_DEFAULT
+35                                                      endcase
+36                      			   end
+37                      			C: begin
+38         1/1                                          unique case (coin)
+39         1/1                                                  2'b00: ns = C;
+40         1/1                                                  2'b01: ns = D;
+41         1/1                                                  2'b10: ns = F;
+42         1/1                                                  2'b11: ns = H;
+                   ==>  MISSING_DEFAULT
+43                                                      endcase
+44                      			   end
+45                      			D: begin
+46         1/1                                          unique case (coin)
+47         1/1                                                  2'b00: ns = D;
+48         1/1                                                  2'b01: ns = E;
+49         1/1                                                  2'b10: ns = G;
+50         1/1                                                  2'b11: ns = E;
+                   ==>  MISSING_DEFAULT
+51                                                      endcase
+52                      			   end
+53                      			E: begin
+54         1/1                                          unique case (coin)
+55         1/1                                                  2'b00: ns = A;
+56         1/1                                                  2'b01: ns = B;
+57         1/1                                                  2'b10: ns = D;
+58         1/1                                                  2'b11: ns = F;
+                   ==>  MISSING_DEFAULT
+59                                                      endcase
+60                      			   end
+61                      			F: begin
+62         1/1                                          unique case (coin)
+63         1/1                                                  2'b00: ns = B;
+64         1/1                                                  2'b01: ns = C;
+65         1/1                                                  2'b10: ns = E;
+66         1/1                                                  2'b11: ns = G;
+                   ==>  MISSING_DEFAULT
+67                                                      endcase
+68                      			   end
+69                      			G: begin
+70         1/1                                          unique case (coin)
+71         1/1                                                  2'b00: ns = C;
+72         1/1                                                  2'b01: ns = D;
+73         1/1                                                  2'b10: ns = F;
+74         1/1                                                  2'b11: ns = H;
+                   ==>  MISSING_DEFAULT
+75                                                      endcase
+76                      			   end
+77                      			H: begin
+78         1/1                                          unique case (coin)
+79         1/1                                                  2'b00: ns = D;
+80         1/1                                                  2'b01: ns = E;
+81         1/1                                                  2'b10: ns = G;
+82         1/1                                                  2'b11: ns = E;
+                   ==>  MISSING_DEFAULT
+83                                                      endcase
+84                      			   end
+                        MISSING_DEFAULT
+85                      		endcase
+86                      	end
+87                      	
+88                      	always_comb begin
+89         1/1          		unique case (cs)
+90                      			A: begin 
+91         1/1          				drop = 0; 
+92         1/1          				credit = 4'd0; 
+93                      			   end
+94                      			B: begin 
+95         1/1          				drop = 0; 
+96         1/1          				credit = 4'd1; 
+97                      			   end
+98                      			C: begin 
+99         1/1          				drop = 0; 
+100        1/1          				credit = 4'd2; 
+101                     			   end
+102                     			D: begin 
+103        1/1          				drop = 0; 
+104        1/1          				credit = 4'd3; 
+105                     			   end
+106                     			E: begin 
+107        1/1          				drop = 1; 
+108        1/1          				credit = 4'd0; 
+109                     			   end
+110                     			F: begin 
+111        1/1          				drop = 1; 
+112        1/1          				credit = 4'd1; 
+113                     			   end
+114                     			G: begin 
+115        1/1          				drop = 1; 
+116        1/1          				credit = 4'd2; 
+117                     			   end
+118                     			H: begin 
+119        1/1          				drop = 1; 
+120        1/1          				credit = 4'd3; 
+121                     			   end
+                        MISSING_DEFAULT
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : fsmTestBench.dut
+===============================================================================
+
+Instance :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Module : 
+
+SCORE  LINE   NAME              
+100.00 100.00 myMoreAbstractFSM 
+
+
+Parent : 
+
+SCORE  LINE   NAME         
+100.00 100.00 fsmTestBench 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : fsmTestBench
+===============================================================================
+SCORE  LINE   
+100.00 100.00 
+
+Source File(s) : 
+
+/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/abstract/fsmTestBench.sv
+
+Module self-instances :
+
+SCORE  LINE   NAME         
+100.00 100.00 fsmTestBench 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : fsmTestBench
+
+             Line No.   Total   Covered  Percent
+TOTAL                      218      218   100.00
+INITIAL            14        4        4   100.00
+INITIAL            19      214      214   100.00
+
+13                      	initial begin
+14         1/1          		clock = 0;
+15         3/3          		forever #10 clock = ~clock;
+16                      	end
+17                      
+18                      	initial begin
+19         1/1          		$monitor($time,,"state = %s, drop = %d, credit = %d, coin = %d", 
+20                      			dut.cs.name, drop, credit, coin);
+21                      
+22         2/2          		coin = 2'b00; reset = 1'b1;
+23                      
+24         2/2          		@ (posedge clock);
+25         2/2          		@ (posedge clock);
+26         2/2          		@ (posedge clock);
+27                      
+28         2/2          		@ (posedge clock);
+29         2/2          		#1 reset = 1'b0;
+30         1/1          		coin = 2'b00; //A
+31                      
+32         2/2          		@ (posedge clock);
+33         2/2          		#1 coin = 2'b01; //B
+34                      
+35         2/2                          @ (posedge clock);
+36         2/2                          #1 coin = 2'b00; //B
+37                      
+38         2/2                          @ (posedge clock);
+39         2/2                          #1 coin = 2'b01; //C
+40                      
+41         2/2                          @ (posedge clock);
+42         2/2                          #1 coin = 2'b00; //C
+43                      
+44         2/2                          @ (posedge clock);
+45         2/2                          #1 coin = 2'b01; //D
+46                      
+47         2/2                          @ (posedge clock);
+48         2/2                          #1 coin = 2'b00; //D
+49                      
+50         2/2                          @ (posedge clock);
+51         2/2                          #1 coin = 2'b01; //E
+52                      
+53         2/2                          @ (posedge clock);
+54         2/2                          #1 coin = 2'b10; //D
+55                      
+56         2/2                          @ (posedge clock);
+57         2/2                          #1 coin = 2'b11; //E
+58                      
+59         2/2                          @ (posedge clock);
+60         2/2                          #1 coin = 2'b11; //F
+61                      
+62         2/2                          @ (posedge clock);
+63         2/2                          #1 coin = 2'b11; //G
+64                      
+65         2/2                          @ (posedge clock);
+66         2/2                          #1 coin = 2'b11; //H
+67                      
+68         2/2                          @ (posedge clock);
+69         2/2                          #1 coin = 2'b10; //G
+70                      
+71         2/2                          @ (posedge clock);
+72         2/2                          #1 coin = 2'b10; //F
+73                      
+74         2/2                          @ (posedge clock);
+75         2/2                          #1 coin = 2'b10; //E
+76                      
+77         2/2                          @ (posedge clock);
+78         2/2                          #1 coin = 2'b00; //A
+79                      
+80         2/2                          @ (posedge clock);
+81         2/2                          #1 coin = 2'b10; //D
+82                      
+83         2/2                          @ (posedge clock);
+84         2/2                          #1 coin = 2'b11; //E
+85                      
+86         2/2                          @ (posedge clock);
+87         2/2                          #1 coin = 2'b01; //B
+88                      
+89         2/2                          @ (posedge clock);
+90         2/2                          #1 coin = 2'b10; //E
+91                      
+92         2/2                          @ (posedge clock);
+93         2/2                          #1 coin = 2'b11; //F
+94                      
+95         2/2                          @ (posedge clock);
+96         2/2                          #1 coin = 2'b00; //B
+97                      
+98         2/2                          @ (posedge clock);
+99         2/2                          #1 coin = 2'b11; //G
+100                     
+101        2/2                          @ (posedge clock);
+102        2/2                          #1 coin = 2'b00; //C
+103                     
+104        2/2                          @ (posedge clock);
+105        2/2                          #1 coin = 2'b10; //F
+106                     
+107        2/2                          @ (posedge clock);
+108        2/2                          #1 coin = 2'b11; //G
+109                     
+110        2/2                          @ (posedge clock);
+111        2/2                          #1 coin = 2'b00; //C
+112                     
+113        2/2                          @ (posedge clock);
+114        2/2                          #1 coin = 2'b01; //D
+115                     
+116        2/2                          @ (posedge clock);
+117        2/2                          #1 coin = 2'b00; //D
+118                     
+119        2/2                          @ (posedge clock);
+120        2/2                          #1 coin = 2'b11; //E
+121                     
+122        2/2                          @ (posedge clock);
+123        2/2                          #1 coin = 2'b01; //B
+124                     
+125        2/2                          @ (posedge clock);
+126        2/2                          #1 coin = 2'b11; //G
+127                     
+128        2/2                          @ (posedge clock);
+129        2/2                          #1 coin = 2'b01; //D
+130                     
+131        2/2                          @ (posedge clock);
+132        2/2                          #1 coin = 2'b01; //E
+133                     
+134        2/2                          @ (posedge clock);
+135        2/2                          #1 coin = 2'b11; //F
+136                     
+137        2/2                          @ (posedge clock);
+138        2/2                          #1 coin = 2'b01; //C
+139                     
+140        2/2                          @ (posedge clock);
+141        2/2                          #1 coin = 2'b10; //F
+142                     
+143        2/2                          @ (posedge clock);
+144        2/2                          #1 coin = 2'b11; //G
+145                     
+146        2/2                          @ (posedge clock);
+147        2/2                          #1 coin = 2'b11; //H
+148                     
+149        2/2                          @ (posedge clock);
+150        2/2                          #1 coin = 2'b01; //E
+151                     
+152        2/2                          @ (posedge clock);
+153        2/2                          #1 coin = 2'b10; //D
+154                     
+155        2/2                          @ (posedge clock);
+156        2/2                          #1 coin = 2'b10; //G
+157                     
+158        2/2                          @ (posedge clock);
+159        2/2                          #1 coin = 2'b11; //H
+160                     
+161        2/2                          @ (posedge clock);
+162        2/2                          #1 coin = 2'b11; //E
+163                     
+164        2/2                          @ (posedge clock);
+165        2/2                          #1 coin = 2'b00; //A
+166                     
+167        2/2                          @ (posedge clock);
+168        2/2                          #1 coin = 2'b11; //F
+169                     
+170        2/2                          @ (posedge clock);
+171        2/2                          #1 coin = 2'b01; //C
+172                     
+173        2/2                          @ (posedge clock);
+174        2/2                          #1 coin = 2'b11; //H
+175                     
+176        2/2                          @ (posedge clock);
+177        2/2                          #1 coin = 2'b00; //D
+178                     
+179        2/2                          @ (posedge clock);
+180        2/2                          #1 $finish;
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : fsmTestBench
+===============================================================================
+
+Instance :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Module : 
+
+SCORE  LINE   NAME         
+100.00 100.00 fsmTestBench 
+
+
+Parent : 
+
+none
+----------------
+
+
+Subtrees :
+
+SCORE  LINE   NAME 
+100.00 100.00 dut  
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.

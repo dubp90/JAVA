@@ -1,0 +1,11 @@
+
+State Machine - |ChipInterface|myMoreAbstractFSM:fsm|cs
+Name cs.H cs.G cs.F cs.E cs.D cs.C cs.B cs.A 
+cs.A 0 0 0 0 0 0 0 0 
+cs.B 0 0 0 0 0 0 1 1 
+cs.C 0 0 0 0 0 1 0 1 
+cs.D 0 0 0 0 1 0 0 1 
+cs.E 0 0 0 1 0 0 0 1 
+cs.F 0 0 1 0 0 0 0 1 
+cs.G 0 1 0 0 0 0 0 1 
+cs.H 1 0 0 0 0 0 0 1 

@@ -1,0 +1,56 @@
+{
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "dFlipFlop": [
+            "dFlipFlop",
+            "fhqgw",
+            "module"
+        ],
+        "top": [
+            "top",
+            "Emx8S",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileProcesses": [
+        "cgproc.12774.json"
+    ],
+    "CurCompileUdps": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "dFlipFlop",
+        "top"
+    ],
+    "CompileStrategy": "fullobj",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 64215
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "Misc": {
+        "archive_dir": "archive.0",
+        "cwd": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/structural",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/structural/simv.daidir",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/structural/csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "stat": {
+        "nMops": 3832
+    },
+    "CompileStatus": "Successful"
+}

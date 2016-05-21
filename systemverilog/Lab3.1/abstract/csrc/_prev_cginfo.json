@@ -1,0 +1,79 @@
+{
+    "LVLData": [
+        "SIM"
+    ],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/abstract",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/abstract/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/abstract/simv.daidir",
+        "archive_dir": "archive.4",
+        "default_output_dir": "csrc"
+    },
+    "MlibObjs": {},
+    "CompileProcesses": [
+        "cgproc.10928.json"
+    ],
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mod": "std",
+                "out": "reYIK_d.o",
+                "mode": 4,
+                "archive": "archive.4/_prev_archive_1.a"
+            }
+        },
+        "fsmTestBench": {
+            "ajGgP_d": {
+                "bytes": 47828,
+                "mod": "fsmTestBench",
+                "mode": 4,
+                "out": "ajGgP_d.o",
+                "archive": "archive.4/_10928_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7336,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "out": "amcQw_d.o",
+                "archive": "archive.4/_10928_archive_1.a"
+            }
+        }
+    },
+    "CompileStrategy": "fullobj",
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "fsmTestBench": [
+            "fsmTestBench",
+            "ajGgP",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "stat": {
+        "nMops": 2124
+    },
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 61594
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "fsmTestBench"
+    ],
+    "PEModules": [],
+    "CompileStatus": "Successful"
+}

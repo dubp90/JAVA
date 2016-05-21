@@ -1,0 +1,27 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ],
+    "ChipInterface": [
+        "ChipInterface",
+        "VHM6x",
+        "module"
+    ],
+    "Tester": [
+        "Tester",
+        "QZwzh",
+        "module"
+    ],
+    "SevenSegmentDigit": [
+        "SevenSegmentDigit",
+        "wDpck",
+        "module"
+    ]
+}

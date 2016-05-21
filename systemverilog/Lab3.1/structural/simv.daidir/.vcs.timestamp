@@ -1,0 +1,106 @@
+0 
+27
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags=
+-Mobjects= /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-cm
+-cm_line
+-gen_obj
+-picarchive
+-sverilog
+/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
+contassign
+dFlipFlop.sv
+fsmTestBench.sv
+line
+myExplicitFSM.sv
+64
+sysc_uni_pwd=/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/structural
+no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
+https_proxy=http://proximus.ece.cmu.edu:3128/
+http_proxy=http://proximus.ece.cmu.edu:3128/
+ftp_proxy=http://proximus.ece.cmu.edu:3128/
+XMODIFIERS=@im=ibus
+XDG_VTNR=4
+XDG_SESSION_ID=4454
+XDG_SESSION_DESKTOP=gnome-classic
+XDG_SEAT=seat0
+XDG_RUNTIME_DIR=/run/user/19367
+XDG_MENU_PREFIX=gnome-
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+XAUTHORITY=/run/gdm/auth-for-pdubey-UbMaDU/database
+WINDOWPATH=1:3:3:3:3:3:3:3:4:4:4:4:4:4:4:4:4:4:4:4:4:4:4:4:4:4:4:4:4
+VTE_VERSION=3803
+VMR_MODE_FLAG=32
+VCS_TARGET_ARCH=amd64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LIC_EXPIRE_WARNING=0
+VCS_HOME=/usr/local/synopsys/vcs-mx_vJ-2014.12
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=amd64
+USERNAME=pdubey
+UNAME=/bin/uname
+TOOL_HOME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64
+SYN_DIR=/usr/local/synopsys/synopsys-2007.03-SP5
+SYNOPSYS=/usr/local/synopsys
+SSH_AUTH_SOCK=/run/user/19367/keyring/ssh
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=710
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/671,unix/unix:/tmp/.ICE-unix/671
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QUARTUS_64BIT=1
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+OVA_UUM=0
+NO_PROXY=localhost,127.0.0.1,.cmu.edu,.cmu.local
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:19367
+KDEDIRS=/usr
+HTTP_PROXY=http://proximus.ece.cmu.edu:3128/
+HTTPS_PROXY=http://proximus.ece.cmu.edu:3128/
+HISTCONTROL=ignoredups
+GPG_AGENT_INFO=/run/user/19367/keyring/gpg:0:1
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome-classic
+FTP_PROXY=http://proximus.ece.cmu.edu:3128/
+DESKTOP_SESSION=gnome-classic
+DC_HOME=/usr/local/synopsys/synopsys-2007.03-SP5/linux/syn
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-lkqES9UgAw,guid=a451a072d6829a0e0a35245f56d4a192
+CVS_RSH=ssh
+AKLOG=/usr/bin/aklog
+0
+4
+1456782793 myExplicitFSM.sv
+1456784985 fsmTestBench.sv
+1456776009 dFlipFlop.sv
+1440743878 /usr/local/synopsys/vcs-mx_vJ-2014.12/include/cm_vcsd.tab
+4
+0 
+1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
+1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
+1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+1456785628 simv.daidir

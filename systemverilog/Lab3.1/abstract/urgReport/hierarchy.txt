@@ -1,0 +1,11 @@
+Design Hierarchy
+
+
+----------------
+SCORE  LINE                
+100.00 100.00 fsmTestBench 
+  
+  ----------------
+  SCORE  LINE       
+  100.00 100.00 dut 
+

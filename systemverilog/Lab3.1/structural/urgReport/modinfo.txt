@@ -1,0 +1,549 @@
+===============================================================================
+Module : dFlipFlop
+===============================================================================
+SCORE  LINE   
+100.00 100.00 
+
+Source File(s) : 
+
+/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/structural/dFlipFlop.sv
+
+Module self-instances :
+
+SCORE  LINE   NAME        
+100.00 100.00 top.run.ff2 
+100.00 100.00 top.run.ff1 
+100.00 100.00 top.run.ff0 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : dFlipFlop
+
+             Line No.   Total   Covered  Percent
+TOTAL                        3        3   100.00
+ALWAYS              8        3        3   100.00
+
+7                       	always @(posedge clock)
+8          1/1          		if (reset == 1)
+9          1/1          			q <= 0;
+10                      		else
+11         1/1          			q <= d;
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : top.run.ff2
+===============================================================================
+
+Instance :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Module : 
+
+SCORE  LINE   NAME      
+100.00 100.00 dFlipFlop 
+
+
+Parent : 
+
+SCORE  LINE   NAME 
+100.00 100.00 run  
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Instance : top.run.ff2
+
+             Line No.   Total   Covered  Percent
+TOTAL                        3        3   100.00
+ALWAYS              8        3        3   100.00
+
+7                       	always @(posedge clock)
+8          1/1          		if (reset == 1)
+9          1/1          			q <= 0;
+10                      		else
+11         1/1          			q <= d;
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : top.run.ff1
+===============================================================================
+
+Instance :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Module : 
+
+SCORE  LINE   NAME      
+100.00 100.00 dFlipFlop 
+
+
+Parent : 
+
+SCORE  LINE   NAME 
+100.00 100.00 run  
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Instance : top.run.ff1
+
+             Line No.   Total   Covered  Percent
+TOTAL                        3        3   100.00
+ALWAYS              8        3        3   100.00
+
+7                       	always @(posedge clock)
+8          1/1          		if (reset == 1)
+9          1/1          			q <= 0;
+10                      		else
+11         1/1          			q <= d;
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : top.run.ff0
+===============================================================================
+
+Instance :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Module : 
+
+SCORE  LINE   NAME      
+100.00 100.00 dFlipFlop 
+
+
+Parent : 
+
+SCORE  LINE   NAME 
+100.00 100.00 run  
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Instance : top.run.ff0
+
+             Line No.   Total   Covered  Percent
+TOTAL                        3        3   100.00
+ALWAYS              8        3        3   100.00
+
+7                       	always @(posedge clock)
+8          1/1          		if (reset == 1)
+9          1/1          			q <= 0;
+10                      		else
+11         1/1          			q <= d;
+
+===============================================================================
+Module : fsmTestBench
+===============================================================================
+SCORE  LINE   
+100.00 100.00 
+
+Source File(s) : 
+
+/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/structural/fsmTestBench.sv
+
+Module self-instances :
+
+SCORE  LINE   NAME     
+100.00 100.00 top.test 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : fsmTestBench
+
+             Line No.   Total   Covered  Percent
+TOTAL                      218      218   100.00
+INITIAL            11        4        4   100.00
+INITIAL            16      214      214   100.00
+
+10                      	initial begin
+11         1/1          		clock = 0;
+12         3/3          		forever #10 clock = ~clock;
+13                      	end
+14                      
+15                      	initial begin
+16         1/1          		$monitor($time,,"state = %d, drop = %d, credit = %d, coin = %d", 
+17                      			{q2, q1, q0}, drop, credit, coin);
+18                      
+19         2/2          		coin = 2'b00; reset = 1'b1;
+20                      
+21         2/2          		@ (posedge clock);
+22         2/2          		@ (posedge clock);
+23         2/2          		@ (posedge clock);
+24                      
+25                      		// release reset and start vector: 00 01 00 01 00 01 00 01 10 11 11 11 11 10 10 10 00 10 11 01 10 11 00 11 00 10 11 00 01 00 11  
+26                      		// 				   A  B  B  C  C  D  D  E  D  E  F  G  H  G  F  E  A  D  E  B  E  F  B  G  C  G  H  D  E  A  F
+27                      		// 01 11 01 01 11 01 10 01 01 11 10 11 11 11 11 
+28                      		// C  H  E  B  G  D  G  D  E  F  E  F  G  H  E
+29                      
+30         2/2          		@ (posedge clock);
+31         2/2          		#1 reset = 1'b0;
+32         1/1          		coin = 2'b00; //A
+33                      
+34         2/2          		@ (posedge clock);
+35         2/2          		#1 coin = 2'b01; //B
+36                      
+37         2/2                          @ (posedge clock);
+38         2/2                          #1 coin = 2'b00; //B
+39                      
+40         2/2                          @ (posedge clock);
+41         2/2                          #1 coin = 2'b01; //C
+42                      
+43         2/2                          @ (posedge clock);
+44         2/2                          #1 coin = 2'b00; //C
+45                      
+46         2/2                          @ (posedge clock);
+47         2/2                          #1 coin = 2'b01; //D
+48                      
+49         2/2                          @ (posedge clock);
+50         2/2                          #1 coin = 2'b00; //D
+51                      
+52         2/2                          @ (posedge clock);
+53         2/2                          #1 coin = 2'b01; //E
+54                      
+55         2/2                          @ (posedge clock);
+56         2/2                          #1 coin = 2'b10; //D
+57                      
+58         2/2                          @ (posedge clock);
+59         2/2                          #1 coin = 2'b11; //E
+60                      
+61         2/2                          @ (posedge clock);
+62         2/2                          #1 coin = 2'b11; //F
+63                      
+64         2/2                          @ (posedge clock);
+65         2/2                          #1 coin = 2'b11; //G
+66                      
+67         2/2                          @ (posedge clock);
+68         2/2                          #1 coin = 2'b11; //H
+69                      
+70         2/2                          @ (posedge clock);
+71         2/2                          #1 coin = 2'b10; //G
+72                      
+73         2/2                          @ (posedge clock);
+74         2/2                          #1 coin = 2'b10; //F
+75                      
+76         2/2                          @ (posedge clock);
+77         2/2                          #1 coin = 2'b10; //E
+78                      
+79         2/2                          @ (posedge clock);
+80         2/2                          #1 coin = 2'b00; //A
+81                      
+82         2/2                          @ (posedge clock);
+83         2/2                          #1 coin = 2'b10; //D
+84                      
+85         2/2                          @ (posedge clock);
+86         2/2                          #1 coin = 2'b11; //E
+87                      
+88         2/2                          @ (posedge clock);
+89         2/2                          #1 coin = 2'b01; //B
+90                      
+91         2/2                          @ (posedge clock);
+92         2/2                          #1 coin = 2'b10; //E
+93                      
+94         2/2                          @ (posedge clock);
+95         2/2                          #1 coin = 2'b11; //F
+96                      
+97         2/2                          @ (posedge clock);
+98         2/2                          #1 coin = 2'b00; //B
+99                      
+100        2/2                          @ (posedge clock);
+101        2/2                          #1 coin = 2'b11; //G
+102                     
+103        2/2                          @ (posedge clock);
+104        2/2                          #1 coin = 2'b00; //C
+105                     
+106        2/2                          @ (posedge clock);
+107        2/2                          #1 coin = 2'b10; //F
+108                     
+109        2/2                          @ (posedge clock);
+110        2/2                          #1 coin = 2'b11; //G
+111                     
+112        2/2                          @ (posedge clock);
+113        2/2                          #1 coin = 2'b00; //C
+114                     
+115        2/2                          @ (posedge clock);
+116        2/2                          #1 coin = 2'b01; //D
+117                     
+118        2/2                          @ (posedge clock);
+119        2/2                          #1 coin = 2'b00; //D
+120                     
+121        2/2                          @ (posedge clock);
+122        2/2                          #1 coin = 2'b11; //E
+123                     
+124        2/2                          @ (posedge clock);
+125        2/2                          #1 coin = 2'b01; //B
+126                     
+127        2/2                          @ (posedge clock);
+128        2/2                          #1 coin = 2'b11; //G
+129                     
+130        2/2                          @ (posedge clock);
+131        2/2                          #1 coin = 2'b01; //D
+132                     
+133        2/2                          @ (posedge clock);
+134        2/2                          #1 coin = 2'b01; //E
+135                     
+136        2/2                          @ (posedge clock);
+137        2/2                          #1 coin = 2'b11; //F
+138                     
+139        2/2                          @ (posedge clock);
+140        2/2                          #1 coin = 2'b01; //C
+141                     
+142        2/2                          @ (posedge clock);
+143        2/2                          #1 coin = 2'b10; //F
+144                     
+145        2/2                          @ (posedge clock);
+146        2/2                          #1 coin = 2'b11; //G
+147                     
+148        2/2                          @ (posedge clock);
+149        2/2                          #1 coin = 2'b11; //H
+150                     
+151        2/2                          @ (posedge clock);
+152        2/2                          #1 coin = 2'b01; //E
+153                     
+154        2/2                          @ (posedge clock);
+155        2/2                          #1 coin = 2'b10; //D
+156                     
+157        2/2                          @ (posedge clock);
+158        2/2                          #1 coin = 2'b10; //G
+159                     
+160        2/2                          @ (posedge clock);
+161        2/2                          #1 coin = 2'b11; //H
+162                     
+163        2/2                          @ (posedge clock);
+164        2/2                          #1 coin = 2'b11; //E
+165                     
+166        2/2                          @ (posedge clock);
+167        2/2                          #1 coin = 2'b00; //A
+168                     
+169        2/2                          @ (posedge clock);
+170        2/2                          #1 coin = 2'b11; //F
+171                     
+172        2/2                          @ (posedge clock);
+173        2/2                          #1 coin = 2'b01; //C
+174                     
+175        2/2                          @ (posedge clock);
+176        2/2                          #1 coin = 2'b11; //H
+177                     
+178        2/2                          @ (posedge clock);
+179        2/2                          #1 coin = 2'b00; //D
+180                     
+181        2/2                          @ (posedge clock);
+182        2/2                          #1 $finish;
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : top.test
+===============================================================================
+
+Instance :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Module : 
+
+SCORE  LINE   NAME         
+100.00 100.00 fsmTestBench 
+
+
+Parent : 
+
+SCORE  LINE   NAME 
+--     --     top  
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : myExplicitFSM
+===============================================================================
+SCORE  LINE   
+100.00 100.00 
+
+Source File(s) : 
+
+/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/structural/myExplicitFSM.sv
+
+Module self-instances :
+
+SCORE  LINE   NAME    
+100.00 100.00 top.run 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : myExplicitFSM
+
+             Line No.   Total   Covered  Percent
+TOTAL                        5        5   100.00
+CONT_ASSIGN        16        1        1   100.00
+CONT_ASSIGN        17        1        1   100.00
+CONT_ASSIGN        19        1        1   100.00
+CONT_ASSIGN        21        1        1   100.00
+CONT_ASSIGN        22        1        1   100.00
+
+15                      
+16         1/1          	assign d2 = (coin[1] & coin[0]) | (q0 & coin[1]) | (q1 & coin[1]) | (q1 & q0 & coin[0]);
+17         1/1          	assign d1 = (q1 & ~coin[1] & ~coin[0]) | (~q1 & q0 & coin[0]) | (q1 & ~q0 & coin[0]) | 
+18                      			(q1 & q0 & ~coin[0]) | (~q1 & ~q0 & coin[1] & ~coin[0]); 
+19         1/1          	assign d0 = (~q0 & coin[1]) | (~q0 & coin[0]) | (q0 & ~coin[1] & ~coin[0]);
+20                      
+21         1/1          	assign drop = q2;
+22         1/1          	assign credit = {1'b0, 1'b0, q1, q0};
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : top.run
+===============================================================================
+
+Instance :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Module : 
+
+SCORE  LINE   NAME          
+100.00 100.00 myExplicitFSM 
+
+
+Parent : 
+
+SCORE  LINE   NAME 
+--     --     top  
+
+
+Subtrees :
+
+SCORE  LINE   NAME 
+100.00 100.00 ff0  
+100.00 100.00 ff1  
+100.00 100.00 ff2  
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : top
+===============================================================================
+SCORE  LINE   
+--     --     
+
+Source File(s) : 
+
+/afs/ece.cmu.edu/usr/pdubey/Private/240/Lab3/structural/fsmTestBench.sv
+
+Module self-instances :
+
+SCORE  LINE   NAME 
+--     --     top  
+
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : top
+===============================================================================
+
+Instance :
+
+SCORE  LINE   
+--     --     
+
+
+Instance's subtree :
+
+SCORE  LINE   
+100.00 100.00 
+
+
+Module : 
+
+SCORE  LINE   NAME 
+--     --     top  
+
+
+Parent : 
+
+none
+----------------
+
+
+Subtrees :
+
+SCORE  LINE   NAME 
+100.00 100.00 run  
+100.00 100.00 test 
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
