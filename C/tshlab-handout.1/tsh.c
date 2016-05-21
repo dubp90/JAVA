@@ -1,7 +1,7 @@
 /* 
  * tsh - A tiny shell program with job control
  * 
- * <Put your name and login ID here>
+ * Prakhar Dubey - pdubey
  */
 #include <assert.h>
 #include <stdio.h>
@@ -75,6 +75,7 @@ struct cmdline_tokens {
 
 /* Function prototypes */
 void eval(char *cmdline);
+int builtin_command(struct cmdline_tokens tok);
 
 void sigchld_handler(int sig);
 void sigtstp_handler(int sig);
@@ -191,11 +192,13 @@ main(int argc, char **argv)
  * background children don't receive SIGINT (SIGTSTP) from the kernel
  * when we type ctrl-c (ctrl-z) at the keyboard.  
  */
-void 
-eval(char *cmdline) 
-{
+void eval(char *cmdline){
+
     int bg;              /* should the job run in bg or fg? */
     struct cmdline_tokens tok;
+    pid_t pid;
+    sigset_t set;
+    int input_fd, output_fd;
 
     /* Parse command line */
     bg = parseline(cmdline, &tok); 
@@ -203,7 +206,125 @@ eval(char *cmdline)
     if (bg == -1) return;               /* parsing error */
     if (tok.argv[0] == NULL)  return;   /* ignore empty lines */
 
-    return;
+    /* Check to see if command line input is a builtin command */
+    if(builtin_command(tok))
+        return;
+    
+    sigemptyset(&set);
+    sigaddset(&set, SIGCHLD);
+    sigaddset(&set, SIGINT);
+    sigaddset(&set, SIGTSTP);
+
+    if(sigprocmask(SIG_BLOCK, &set, NULL))
+        unix_error("sigprocmask failed.\n");
+
+    pid = fork();
+    if(pid == -1)
+       unix_error("fork failed.\n");
+    
+    /* CHILD */
+    if(pid == 0){
+        
+        /* Duplicate open file descriptors for child process */
+        if(tok.infile && (input_fd = open(tok.infile, O_RDONLY)))
+            dup2(input_fd, 0);
+        if(tok.outfile && (output_fd = open(tok.outfile, O_WRONLY)))
+            dup2(output_fd, 1);
+
+        if(sigprocmask(SIG_UNBLOCK, &set, NULL))
+            unix_error("sigprocmask failed.\n");
+
+        /* Child given seperate process group so it can share signals */
+        if(setpgid(0, 0))
+            unix_error("setpgid failed.\n");
+
+        /* Run the command in the context of the child */
+        if(execve(tok.argv[0], tok.argv, environ) == -1){
+            printf("%s: command not found.\n", tok.argv[0]);
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    /* PARENT */
+    else{
+
+        addjob(job_list, pid, bg + 1, cmdline);
+
+        if(sigprocmask(SIG_UNBLOCK, &set, NULL))
+            unix_error("sigprocmask failed.\n");
+
+        /* If job is running in fg, wait for it terminate and then return */
+        if(!bg)
+            while(fgpid(job_list) != 0);
+        else{
+            printf("[%d] (%d) %s\n", pid2jid(pid), 
+                   pid, cmdline);
+        }
+    }
+}
+
+/*
+ * If the first command line argument is a builtin command, run it and return
+ * true. 
+ * - the quit command terminates the shell.
+ * - the jobs command lists all background jobs
+ * - the bg job command restarts job by sending SIGCONT signal and then it runs
+ *   in the background. the job argument can be either PID or JID.
+ * - the fg job command restarts job by sending a SIGCONT signal, and then it
+ *   runs in the foregrond. the job argument can be PID or JID.  
+ */
+int builtin_command(struct cmdline_tokens tok){
+
+    int output_fd;
+    struct job_t *job;
+
+    switch(tok.builtins){
+        /* simply exit the shell */
+        case BUILTIN_QUIT:
+            exit(EXIT_SUCCESS);
+
+        /* check for I/O redirection, and place output in specified outfile
+         * else, output to screen */
+        case BUILTIN_JOBS:
+            if(tok.outfile && (output_fd = open(tok.outfile, O_WRONLY)))
+                listjobs(job_list, output_fd);
+            else
+                listjobs(job_list, STDOUT_FILENO);
+            return 1;
+
+        case BUILTIN_BG:
+        case BUILTIN_FG:
+            /* Check if argument with bg/fg is JID */
+            if((tok.argv)[1][0] == '%'){
+                /* Parse out the '%' and get job */
+                (tok.argv)[1][0] = '0';
+                job = getjobjid(job_list, atoi((tok.argv)[1]));
+            }
+            /* bg/fg called with PID, which we can use to get job */
+            else
+                job = getjobpid(job_list, atoi((tok.argv)[1]));
+
+            if(tok.builtins == BUILTIN_BG){
+                job->state = BG;
+                printf("[%d] (%d) %s\n", pid2jid(job->pid),
+                       job->pid, job->cmdline);
+                kill(-(job->pid), SIGCONT);
+            }
+            else{
+                job->state = FG;
+                kill(-(job->pid), SIGCONT);
+                /* wait for fg process to finish */
+                while(fgpid(job_list) != 0);
+            }
+            return 1;
+
+
+        default:
+            return 0;
+
+    }
+
+    return 0;
 }
 
 /* 
@@ -365,10 +486,48 @@ parseline(const char *cmdline, struct cmdline_tokens *tok)
  *     handler reaps all available zombie children, but doesn't wait 
  *     for any other currently running children to terminate.  
  */
-void 
-sigchld_handler(int sig) 
-{
-    return;
+void sigchld_handler(int sig){
+
+    pid_t pid;
+    int status, del_stat;
+    struct job_t *job;
+
+    /* pid_t waitpid(pid_t pid, int *status, int options);
+     * pid = -1 : wait for any child process
+     * option = WNOHANG | WUNTRACED : wait till child process in wait
+     * 				set has terminated or stopped. Also, 
+     * 				if no child process is stopped or 
+     * 				terminated, return immidiately.
+     * status = &status: stores the return status of the child. */ 
+    while((pid = waitpid(-1, &status, WNOHANG | WUNTRACED)) > 0){
+        
+        job = getjobpid(job_list, pid);        
+
+        /* Case 1: child terminated normally */
+        if(WIFEXITED(status)){
+            del_stat = deletejob(job_list, pid);
+            if(del_stat == 0)
+                unix_error("deletejob failed\n");
+        }
+        
+        /* Case 2: child terminated upon recieving an uncaught signal */
+        else if(WIFSIGNALED(status)){
+            printf("Job [%d] (%d) terminated by signal %d\n",
+                   job->jid, pid, WTERMSIG(status));
+            del_stat = deletejob(job_list, pid);
+            if(del_stat == 0)
+                unix_error("deletejob falied\n");
+        }
+
+        /* Case 3: child is currently stopped */
+        else{
+            printf("Job [%d] (%d) stopped by signal %d\n",
+                   job->jid, pid, WSTOPSIG(status));
+            job->state = ST;
+        }
+
+    }
+
 }
 
 /* 
@@ -376,10 +535,11 @@ sigchld_handler(int sig)
  *    user types ctrl-c at the keyboard.  Catch it and send it along
  *    to the foreground job.  
  */
-void 
-sigint_handler(int sig) 
-{
-    return;
+void sigint_handler(int sig){
+    pid_t pid = fgpid(job_list);
+    if(pid == 0)
+        return;
+    kill(-pid, SIGINT);
 }
 
 /*
@@ -387,10 +547,11 @@ sigint_handler(int sig)
  *     the user types ctrl-z at the keyboard. Catch it and suspend the
  *     foreground job by sending it a SIGTSTP.  
  */
-void 
-sigtstp_handler(int sig) 
-{
-    return;
+void sigtstp_handler(int sig){
+    pid_t pid = fgpid(job_list);
+    if(pid == 0)
+        return;
+    kill(-pid, SIGTSTP);
 }
 
 /*********************
